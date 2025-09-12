@@ -41,14 +41,14 @@
             // 
             // txtGebruikersnaam
             // 
-            this.txtGebruikersnaam.Location = new System.Drawing.Point(381, 247);
+            this.txtGebruikersnaam.Location = new System.Drawing.Point(381, 203);
             this.txtGebruikersnaam.Name = "txtGebruikersnaam";
             this.txtGebruikersnaam.Size = new System.Drawing.Size(111, 22);
             this.txtGebruikersnaam.TabIndex = 0;
             // 
             // txtWachtwoord
             // 
-            this.txtWachtwoord.Location = new System.Drawing.Point(381, 203);
+            this.txtWachtwoord.Location = new System.Drawing.Point(381, 247);
             this.txtWachtwoord.Name = "txtWachtwoord";
             this.txtWachtwoord.Size = new System.Drawing.Size(111, 22);
             this.txtWachtwoord.TabIndex = 1;
@@ -94,11 +94,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(207, 42);
+            this.label1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(169, 42);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(1);
-            this.label1.Size = new System.Drawing.Size(318, 44);
+            this.label1.Size = new System.Drawing.Size(391, 53);
             this.label1.TabIndex = 5;
             this.label1.Text = "AquaPalace LVS";
             // 
@@ -111,7 +111,7 @@
             this.lblGebruikersnaam.Image = global::Aquapalaca.Properties.Resources._003366;
             this.lblGebruikersnaam.Location = new System.Drawing.Point(230, 206);
             this.lblGebruikersnaam.Name = "lblGebruikersnaam";
-            this.lblGebruikersnaam.Size = new System.Drawing.Size(129, 16);
+            this.lblGebruikersnaam.Size = new System.Drawing.Size(121, 15);
             this.lblGebruikersnaam.TabIndex = 6;
             this.lblGebruikersnaam.Text = "Gebruikersnaam :";
             this.lblGebruikersnaam.Click += new System.EventHandler(this.label2_Click);
@@ -125,7 +125,7 @@
             this.lblWachtwoord.Image = global::Aquapalaca.Properties.Resources._003366;
             this.lblWachtwoord.Location = new System.Drawing.Point(255, 247);
             this.lblWachtwoord.Name = "lblWachtwoord";
-            this.lblWachtwoord.Size = new System.Drawing.Size(100, 16);
+            this.lblWachtwoord.Size = new System.Drawing.Size(93, 15);
             this.lblWachtwoord.TabIndex = 7;
             this.lblWachtwoord.Text = "Wachtwoord :";
             // 

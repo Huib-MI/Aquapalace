@@ -12,11 +12,40 @@ namespace Aquapalaca
     {
         public int Id;
         public string Gebruikersnaam;
-        public string Wachtwoord;
-        public string Voornaam;
-        public string Achternaam;
-        public string Email;
-        
-        
+        public string Hashwachtwoord;
+        public string Rol;
+        public DateTime CreatedAt;
+
+        public static Gebruiker getLoginGebruiker(string gebruikersnaam, string wachtwoord)
+        {
+            Gebruiker gebruikersobject = null;
+            MySqlConnection con = Databases.start();
+            con.Open();
+            MySqlCommand myCommand =  new MySqlCommand();
+            myCommand.Connection = con;
+            myCommand.CommandText = @"SELECT * FROM users WHERE user_username = @gebruikersnaam;";
+            myCommand.Parameters.AddWithValue("@gebruikersnaam", gebruikersnaam);
+            MySqlDataReader reader = myCommand.ExecuteReader();
+            while (reader.Read())
+            {
+                if (reader.HasRows)
+                {
+                    string bestaandWachtwoord = Convert.ToString((reader["user_password_hash"]));
+                    bool isMatch = BCrypt.Net.BCrypt.Verify(wachtwoord, bestaandWachtwoord);
+
+                    if (isMatch)
+                    {
+                        gebruikersobject = new Gebruiker();
+                        gebruikersobject.Id = Convert.ToInt32(reader["user_id"]);
+                        gebruikersobject.Gebruikersnaam = Convert.ToString(reader["user_username"]);
+                        gebruikersobject.Hashwachtwoord = bestaandWachtwoord;
+                        gebruikersobject.Rol = Convert.ToString(reader["user_role"]);
+                        gebruikersobject.CreatedAt = Convert.ToDateTime(reader["user_created_at"]);
+                    }
+                }
+            }
+            con.Close();
+            return gebruikersobject;
+        }  
     }
 }

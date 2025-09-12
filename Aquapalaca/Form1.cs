@@ -34,12 +34,9 @@ namespace Aquapalaca
             Gebruiker gebruikersobject = Gebruiker.getLoginGebruiker(gebruikersnaam, wachtwoord);
             if (gebruikersobject != null)
             {
-                voornaam = gebruikersobject.Voornaam;
-                achternaam = gebruikersobject.Achternaam;
-                this.Close();
                 KlantPagina klantPagina = new KlantPagina();
-                KlantPagina.instance.lab1.Text = "Welkom " + voornaam + " " + achternaam + "!";
                 klantPagina.Show();
+                this.Hide();
             }
             else
             {
@@ -52,6 +49,8 @@ namespace Aquapalaca
         {
             MaakRondeHoeken(pictureBox1, 20);
             RondButton(btnInloggen, 20);
+            string hashedpassword = BCrypt.Net.BCrypt.HashPassword("Welkom123");
+            return;
         }
 
         private void label2_Click(object sender, EventArgs e)

@@ -46,6 +46,35 @@ namespace Aquapalaca
             }
             con.Close();
             return gebruikersobject;
-        }  
-    }
+        }
+
+        public static List<Gebruiker> getGebruikers()
+        {
+            List<Gebruiker> gebruikerlist = new List<Gebruiker>();
+
+            MySqlConnection con = Databases.start();
+            con.Open();
+
+            MySqlCommand myCommand = new MySqlCommand();
+            myCommand.Connection = con;
+            myCommand.CommandText = @"SELECT * FROM users";
+
+            MySqlDataReader reader = myCommand.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Gebruiker gebruikerobject = new Gebruiker();
+                gebruikerobject.Id = Convert.ToInt32((reader["user_id"]));
+                gebruikerobject.Gebruikersnaam = Convert.ToString((reader["user_username"]));
+                gebruikerobject.Hashwachtwoord = Convert.ToString(reader["user_password_hash"]);
+                gebruikerobject.Rol = Convert.ToString(reader["user_role"]);
+                gebruikerobject.CreatedAt = Convert.ToDateTime(reader["user_created_at"]);
+                gebruikerlist.Add(gebruikerobject);
+            }
+
+            con.Close();
+
+            return gebruikerlist;
+        }
+    }   
 }

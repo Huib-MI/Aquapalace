@@ -34,14 +34,32 @@ namespace Aquapalaca
             Gebruiker gebruikersobject = Gebruiker.getLoginGebruiker(gebruikersnaam, wachtwoord);
             if (gebruikersobject != null)
             {
-                KlantPagina klantPagina = new KlantPagina();
-                klantPagina.Show();
-                this.Hide();
+                if (gebruikersobject.Rol == "gast")
+                {
+                    KlantPagina klantPagina = new KlantPagina();
+                    klantPagina.Show();
+                    this.Hide();
+                }
+                else if (gebruikersobject.Rol == "beheerder")
+                {
+                    beheerPagina BeheerPagina = new beheerPagina();
+                    BeheerPagina.Show();
+                    this.Hide();
+                }
+                else if (gebruikersobject.Rol == "medewerker")
+                {
+                    medewerkerPagina MedewerkerPagina = new medewerkerPagina();
+                    MedewerkerPagina.Show();
+                    this.Hide();
+                }
             }
             else
             {
                 MessageBox.Show("Ongeldige login");
             }
+
+           
+
 
         }
 

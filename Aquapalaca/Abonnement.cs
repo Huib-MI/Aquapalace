@@ -47,5 +47,43 @@ namespace Aquapalaca
 
             return abonnementlist;
         }
+
+        public void Insert()
+        {
+
+            //Werkt nog niet
+            using (MySqlConnection con = Databases.start())
+            {
+                con.Open();
+
+                string sql = @"INSERT INTO subscriptions (
+                            subscription_customer_id, 
+                            subscription_type_id, 
+                            subscription_start_date,
+                            subscription_end_date,
+                            subscription_remaining_rides,
+                            subscription_active
+                       ) VALUES (
+                            @KlantId, 
+                            @TypeId, 
+                            @StartDatum,
+                            @EindDatum,
+                            @OverigeRitten,
+                            @Actief
+                       )";
+
+                using (MySqlCommand cmd = new MySqlCommand(sql, con))
+                {
+                    cmd.Parameters.AddWithValue("@KlantId", this.KlantId);
+                    cmd.Parameters.AddWithValue("@TypeId", this.TypeId);
+                    cmd.Parameters.AddWithValue("@StartDatum", this.StartDatum);
+                    cmd.Parameters.AddWithValue("@EindDatum", this.EindDatum);
+                    cmd.Parameters.AddWithValue("@OverigeRitten", this.OverigeRitten);
+                    cmd.Parameters.AddWithValue("@Actief", this.Actief);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

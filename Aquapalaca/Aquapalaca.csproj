@@ -102,6 +102,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abonnement.cs" />
+    <Compile Include="Abonnementsoverzicht.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abonnementsoverzicht.Designer.cs">
+      <DependentUpon>Abonnementsoverzicht.cs</DependentUpon>
+    </Compile>
     <Compile Include="beheerPagina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Abonnementsoverzicht.resx">
+      <DependentUpon>Abonnementsoverzicht.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="beheerPagina.resx">
       <DependentUpon>beheerPagina.cs</DependentUpon>
     </EmbeddedResource>

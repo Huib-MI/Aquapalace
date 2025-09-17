@@ -10,23 +10,18 @@ using System.Windows.Forms;
 
 namespace Aquapalaca
 {
-    public partial class beheerPagina : Form
+    public partial class medewerkerAbonnement : Form
     {
-        public beheerPagina()
+        public medewerkerAbonnement()
         {
             InitializeComponent();
         }
 
-        private void btnUitloggen_Click(object sender, EventArgs e)
+        private void btnTerug_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.Show();
+            medewerkerPagina MedewerkerPagina = new medewerkerPagina();
+            MedewerkerPagina.Show();
             this.Hide();
-        }
-
-        private void beheerPagina_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

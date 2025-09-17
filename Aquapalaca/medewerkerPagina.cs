@@ -23,5 +23,26 @@ namespace Aquapalaca
             form1.Show();
             this.Hide();
         }
+
+        private void btnAbonnementen_Click(object sender, EventArgs e)
+        {
+            medewerkerAbonnement MedewerkerAbonnement = new medewerkerAbonnement();
+            MedewerkerAbonnement.Show();
+            this.Hide();
+        }
+
+        private void btnKlanten_Click(object sender, EventArgs e)
+        {
+            medewerkerKlanten MedewerkerKlanten = new medewerkerKlanten();
+            MedewerkerKlanten.Show();
+            this.Hide();
+        }
+
+        private void btnInchecken_Click(object sender, EventArgs e)
+        {
+            medewerkerInchecken MedewerkerInchecken = new medewerkerInchecken();
+            MedewerkerInchecken.Show();
+            this.Hide();
+        }
     }
 }

@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnUitloggen = new System.Windows.Forms.Button();
+            this.btnTerug = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnUitloggen
+            // btnTerug
             // 
-            this.btnUitloggen.Location = new System.Drawing.Point(620, 346);
-            this.btnUitloggen.Name = "btnUitloggen";
-            this.btnUitloggen.Size = new System.Drawing.Size(132, 71);
-            this.btnUitloggen.TabIndex = 0;
-            this.btnUitloggen.Text = "Uitloggen";
-            this.btnUitloggen.UseVisualStyleBackColor = true;
-            this.btnUitloggen.Click += new System.EventHandler(this.btnUitloggen_Click);
+            this.btnTerug.Location = new System.Drawing.Point(620, 346);
+            this.btnTerug.Name = "btnTerug";
+            this.btnTerug.Size = new System.Drawing.Size(132, 71);
+            this.btnTerug.TabIndex = 0;
+            this.btnTerug.Text = "Terug";
+            this.btnTerug.UseVisualStyleBackColor = true;
+            this.btnTerug.Click += new System.EventHandler(this.btnUitloggen_Click);
             // 
             // klantGeschiedenis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnUitloggen);
+            this.Controls.Add(this.btnTerug);
             this.Name = "klantGeschiedenis";
             this.Text = "klantGeschiedenis";
             this.ResumeLayout(false);
@@ -55,6 +55,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnUitloggen;
+        private System.Windows.Forms.Button btnTerug;
     }
 }

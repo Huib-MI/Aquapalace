@@ -93,6 +93,7 @@
             this.BtnNieuwAbonnement.TabIndex = 4;
             this.BtnNieuwAbonnement.Text = "Nieuw abonnement";
             this.BtnNieuwAbonnement.UseVisualStyleBackColor = true;
+            this.BtnNieuwAbonnement.Click += new System.EventHandler(this.BtnNieuwAbonnement_Click);
             // 
             // BtnVerlengen
             // 
@@ -103,6 +104,7 @@
             this.BtnVerlengen.TabIndex = 5;
             this.BtnVerlengen.Text = "Abonnement verlengen";
             this.BtnVerlengen.UseVisualStyleBackColor = true;
+            this.BtnVerlengen.Click += new System.EventHandler(this.BtnVerlengen_Click);
             // 
             // BtnInchecken
             // 
@@ -113,6 +115,7 @@
             this.BtnInchecken.TabIndex = 6;
             this.BtnInchecken.Text = "Inchecken";
             this.BtnInchecken.UseVisualStyleBackColor = true;
+            this.BtnInchecken.Click += new System.EventHandler(this.BtnInchecken_Click);
             // 
             // BtnGeschiedenis
             // 
@@ -123,6 +126,7 @@
             this.BtnGeschiedenis.TabIndex = 7;
             this.BtnGeschiedenis.Text = "Geschiedenis Bekijken";
             this.BtnGeschiedenis.UseVisualStyleBackColor = true;
+            this.BtnGeschiedenis.Click += new System.EventHandler(this.BtnGeschiedenis_Click);
             // 
             // lblJaarAbonnement
             // 

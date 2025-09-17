@@ -44,5 +44,33 @@ namespace Aquapalaca
         {
 
         }
+
+        private void BtnVerlengen_Click(object sender, EventArgs e)
+        {
+            klantVerlengen KlantVerlengen = new klantVerlengen();
+            KlantVerlengen.Show();
+            this.Hide();
+        }
+
+        private void BtnInchecken_Click(object sender, EventArgs e)
+        {
+            klantInchecken KlantInchecken = new klantInchecken();
+            KlantInchecken.Show();
+            this.Hide();
+        }
+
+        private void BtnGeschiedenis_Click(object sender, EventArgs e)
+        {
+            klantGeschiedenis KlantGeschiedenis = new klantGeschiedenis();
+            KlantGeschiedenis.Show();
+            this.Hide();
+        }
+
+        private void BtnNieuwAbonnement_Click(object sender, EventArgs e)
+        {
+            klantNieuwAbonnement KlantNieuwAbonnement = new klantNieuwAbonnement();
+            KlantNieuwAbonnement.Show();
+            this.Hide();
+        }
     }
 }

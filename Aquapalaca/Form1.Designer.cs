@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.txtGebruikersnaam = new System.Windows.Forms.TextBox();
             this.txtWachtwoord = new System.Windows.Forms.TextBox();
             this.btnInloggen = new System.Windows.Forms.Button();
@@ -36,7 +37,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblGebruikersnaam = new System.Windows.Forms.Label();
             this.lblWachtwoord = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtGebruikersnaam
@@ -129,6 +132,17 @@
             this.lblWachtwoord.TabIndex = 7;
             this.lblWachtwoord.Text = "Wachtwoord :";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::Aquapalaca.Properties.Resources.output;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(102, 29);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(61, 66);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -137,6 +151,7 @@
             this.BackgroundImage = global::Aquapalaca.Properties.Resources.output;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblWachtwoord);
             this.Controls.Add(this.lblGebruikersnaam);
             this.Controls.Add(this.label1);
@@ -149,6 +164,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,6 +180,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblGebruikersnaam;
         private System.Windows.Forms.Label lblWachtwoord;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

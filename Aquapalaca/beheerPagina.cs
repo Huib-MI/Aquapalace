@@ -23,5 +23,10 @@ namespace Aquapalaca
             form1.Show();
             this.Hide();
         }
+
+        private void beheerPagina_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

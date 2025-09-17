@@ -19,7 +19,7 @@ namespace Aquapalaca
         {
             InitializeComponent();
             instance = this;
-            lab1 = lblNaam;
+            lab1 = lblWelkom;
             this.Size = new Size(800, 400);
         }
 
@@ -37,6 +37,39 @@ namespace Aquapalaca
         {
             Form1 form1 = new Form1();
             form1.Show();
+            this.Hide();
+        }
+
+        private void lblAbonnement_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnVerlengen_Click(object sender, EventArgs e)
+        {
+            klantVerlengen KlantVerlengen = new klantVerlengen();
+            KlantVerlengen.Show();
+            this.Hide();
+        }
+
+        private void BtnInchecken_Click(object sender, EventArgs e)
+        {
+            klantInchecken KlantInchecken = new klantInchecken();
+            KlantInchecken.Show();
+            this.Hide();
+        }
+
+        private void BtnGeschiedenis_Click(object sender, EventArgs e)
+        {
+            klantGeschiedenis KlantGeschiedenis = new klantGeschiedenis();
+            KlantGeschiedenis.Show();
+            this.Hide();
+        }
+
+        private void BtnNieuwAbonnement_Click(object sender, EventArgs e)
+        {
+            klantNieuwAbonnement KlantNieuwAbonnement = new klantNieuwAbonnement();
+            KlantNieuwAbonnement.Show();
             this.Hide();
         }
     }

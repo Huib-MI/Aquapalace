@@ -122,11 +122,35 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Gebruiker.cs" />
+    <Compile Include="klantGeschiedenis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="klantGeschiedenis.Designer.cs">
+      <DependentUpon>klantGeschiedenis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="klantInchecken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="klantInchecken.Designer.cs">
+      <DependentUpon>klantInchecken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="klantNieuwAbonnement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="klantNieuwAbonnement.Designer.cs">
+      <DependentUpon>klantNieuwAbonnement.cs</DependentUpon>
+    </Compile>
     <Compile Include="KlantPagina.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="KlantPagina.Designer.cs">
       <DependentUpon>KlantPagina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="klantVerlengen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="klantVerlengen.Designer.cs">
+      <DependentUpon>klantVerlengen.cs</DependentUpon>
     </Compile>
     <Compile Include="medewerkerAbonnement.cs">
       <SubType>Form</SubType>
@@ -163,8 +187,20 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="klantGeschiedenis.resx">
+      <DependentUpon>klantGeschiedenis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="klantInchecken.resx">
+      <DependentUpon>klantInchecken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="klantNieuwAbonnement.resx">
+      <DependentUpon>klantNieuwAbonnement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KlantPagina.resx">
       <DependentUpon>KlantPagina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="klantVerlengen.resx">
+      <DependentUpon>klantVerlengen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="medewerkerAbonnement.resx">
       <DependentUpon>medewerkerAbonnement.cs</DependentUpon>

@@ -42,5 +42,13 @@ namespace Aquapalaca
             this.Hide();
 
         }
+
+        private void BtnRolbeheer_Click(object sender, EventArgs e)
+        {
+            var nieuweForm = new Rolbeheer();
+            nieuweForm.Show();
+
+            this.Hide();
+        }
     }
 }

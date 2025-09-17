@@ -76,6 +76,7 @@
             this.BtnRolbeheer.TabIndex = 3;
             this.BtnRolbeheer.Text = "Rolbeheer";
             this.BtnRolbeheer.UseVisualStyleBackColor = true;
+            this.BtnRolbeheer.Click += new System.EventHandler(this.BtnRolbeheer_Click);
             // 
             // BtnAbonnementsoverzicht
             // 

@@ -46,7 +46,7 @@
             // 
             // btnAbonnementen
             // 
-            this.btnAbonnementen.Location = new System.Drawing.Point(90, 97);
+            this.btnAbonnementen.Location = new System.Drawing.Point(37, 42);
             this.btnAbonnementen.Name = "btnAbonnementen";
             this.btnAbonnementen.Size = new System.Drawing.Size(142, 56);
             this.btnAbonnementen.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // btnKlanten
             // 
-            this.btnKlanten.Location = new System.Drawing.Point(264, 97);
+            this.btnKlanten.Location = new System.Drawing.Point(266, 42);
             this.btnKlanten.Name = "btnKlanten";
             this.btnKlanten.Size = new System.Drawing.Size(141, 56);
             this.btnKlanten.TabIndex = 2;
@@ -66,7 +66,7 @@
             // 
             // btnInchecken
             // 
-            this.btnInchecken.Location = new System.Drawing.Point(443, 97);
+            this.btnInchecken.Location = new System.Drawing.Point(443, 42);
             this.btnInchecken.Name = "btnInchecken";
             this.btnInchecken.Size = new System.Drawing.Size(136, 56);
             this.btnInchecken.TabIndex = 3;

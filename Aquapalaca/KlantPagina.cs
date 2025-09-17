@@ -44,5 +44,25 @@ namespace Aquapalaca
         {
 
         }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnNieuwAbonnement_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblRittenkaartOutput_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

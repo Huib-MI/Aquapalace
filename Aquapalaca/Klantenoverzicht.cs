@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace Aquapalaca
 {
-    public partial class Rolbeheer : Form
+    public partial class Klantenoverzicht : Form
     {
-        public Rolbeheer()
+        public Klantenoverzicht()
         {
             InitializeComponent();
-        }
-
-        private void BtnUitloggen_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-
-            beheerPagina beheer = new beheerPagina();
-
-            beheer.Show();
         }
     }
 }

@@ -41,6 +41,8 @@ namespace Aquapalaca
 
             this.Hide();
 
+
+
         }
 
         private void BtnRolbeheer_Click(object sender, EventArgs e)

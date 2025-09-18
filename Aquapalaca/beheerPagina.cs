@@ -28,5 +28,27 @@ namespace Aquapalaca
         {
 
         }
+
+        private void BtnGebruikersoverzicht_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnAbonnementsoverzicht_Click(object sender, EventArgs e)
+        {
+            var nieuweForm = new Abonnementsoverzicht();
+            nieuweForm.Show();
+
+            this.Hide();
+
+        }
+
+        private void BtnRolbeheer_Click(object sender, EventArgs e)
+        {
+            var nieuweForm = new Rolbeheer();
+            nieuweForm.Show();
+
+            this.Hide();
+        }
     }
 }

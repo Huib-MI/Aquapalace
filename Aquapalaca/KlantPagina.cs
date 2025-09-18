@@ -45,39 +45,32 @@ namespace Aquapalaca
 
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
+        private void BtnVerlengen_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void BtnNieuwAbonnement_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblRittenkaartOutput_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnGeschiedenis_Click(object sender, EventArgs e)
-        {
-            
+            klantVerlengen KlantVerlengen = new klantVerlengen();
+            KlantVerlengen.Show();
+            this.Hide();
         }
 
         private void BtnInchecken_Click(object sender, EventArgs e)
         {
-            
+            klantInchecken KlantInchecken = new klantInchecken();
+            KlantInchecken.Show();
+            this.Hide();
         }
 
-        private void BtnVerlengen_Click(object sender, EventArgs e)
+        private void BtnGeschiedenis_Click(object sender, EventArgs e)
         {
+            klantGeschiedenis KlantGeschiedenis = new klantGeschiedenis();
+            KlantGeschiedenis.Show();
+            this.Hide();
+        }
 
+        private void BtnNieuwAbonnement_Click(object sender, EventArgs e)
+        {
+            klantNieuwAbonnement KlantNieuwAbonnement = new klantNieuwAbonnement();
+            KlantNieuwAbonnement.Show();
+            this.Hide();
         }
     }
 }

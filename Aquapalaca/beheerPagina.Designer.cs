@@ -41,9 +41,9 @@
             // 
             // btnUitloggen
             // 
-            this.btnUitloggen.Location = new System.Drawing.Point(602, 322);
+            this.btnUitloggen.Location = new System.Drawing.Point(671, 368);
             this.btnUitloggen.Name = "btnUitloggen";
-            this.btnUitloggen.Size = new System.Drawing.Size(124, 97);
+            this.btnUitloggen.Size = new System.Drawing.Size(117, 51);
             this.btnUitloggen.TabIndex = 0;
             this.btnUitloggen.Text = "Uitloggen";
             this.btnUitloggen.UseVisualStyleBackColor = true;
@@ -57,6 +57,7 @@
             this.BtnGebruikersoverzicht.TabIndex = 1;
             this.BtnGebruikersoverzicht.Text = "Gebruikersoverzicht";
             this.BtnGebruikersoverzicht.UseVisualStyleBackColor = true;
+            this.BtnGebruikersoverzicht.Click += new System.EventHandler(this.BtnGebruikersoverzicht_Click);
             // 
             // BtnAanpassen
             // 
@@ -75,6 +76,7 @@
             this.BtnRolbeheer.TabIndex = 3;
             this.BtnRolbeheer.Text = "Rolbeheer";
             this.BtnRolbeheer.UseVisualStyleBackColor = true;
+            this.BtnRolbeheer.Click += new System.EventHandler(this.BtnRolbeheer_Click);
             // 
             // BtnAbonnementsoverzicht
             // 
@@ -84,6 +86,7 @@
             this.BtnAbonnementsoverzicht.TabIndex = 5;
             this.BtnAbonnementsoverzicht.Text = "Abonnementsoverzicht";
             this.BtnAbonnementsoverzicht.UseVisualStyleBackColor = true;
+            this.BtnAbonnementsoverzicht.Click += new System.EventHandler(this.BtnAbonnementsoverzicht_Click);
             // 
             // label1
             // 
@@ -101,7 +104,7 @@
             // 
             this.pictureBox2.BackgroundImage = global::Aquapalaca.Properties.Resources.output;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(258, 9);
+            this.pictureBox2.Location = new System.Drawing.Point(247, 9);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(61, 66);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;

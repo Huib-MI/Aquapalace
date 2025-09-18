@@ -1,6 +1,6 @@
 ﻿namespace Aquapalaca
 {
-    partial class medewerkerAbonnement
+    partial class klantNieuwAbonnement
     {
         /// <summary>
         /// Required designer variable.
@@ -33,23 +33,22 @@
             // 
             // btnTerug
             // 
-            this.btnTerug.Location = new System.Drawing.Point(631, 341);
+            this.btnTerug.Location = new System.Drawing.Point(624, 335);
             this.btnTerug.Name = "btnTerug";
-            this.btnTerug.Size = new System.Drawing.Size(112, 71);
+            this.btnTerug.Size = new System.Drawing.Size(124, 76);
             this.btnTerug.TabIndex = 0;
             this.btnTerug.Text = "Terug";
             this.btnTerug.UseVisualStyleBackColor = true;
-            this.btnTerug.Click += new System.EventHandler(this.btnTerug_Click);
+            this.btnTerug.Click += new System.EventHandler(this.button1_Click);
             // 
-            // medewerkerAbonnement
+            // klantNieuwAbonnement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Aquapalaca.Properties.Resources.output;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnTerug);
-            this.Name = "medewerkerAbonnement";
-            this.Text = "medewerkerAbonnement";
+            this.Name = "klantNieuwAbonnement";
+            this.Text = "klantNieuwAbonnement";
             this.ResumeLayout(false);
 
         }

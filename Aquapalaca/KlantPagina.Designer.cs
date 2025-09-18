@@ -130,6 +130,7 @@
             this.BtnInchecken.TabIndex = 6;
             this.BtnInchecken.Text = "Inchecken";
             this.BtnInchecken.UseVisualStyleBackColor = false;
+            this.BtnInchecken.Click += new System.EventHandler(this.BtnInchecken_Click);
             // 
             // BtnGeschiedenis
             // 
@@ -143,6 +144,7 @@
             this.BtnGeschiedenis.TabIndex = 7;
             this.BtnGeschiedenis.Text = "Geschiedenis Bekijken";
             this.BtnGeschiedenis.UseVisualStyleBackColor = false;
+            this.BtnGeschiedenis.Click += new System.EventHandler(this.BtnGeschiedenis_Click);
             // 
             // lblJaarAbonnement
             // 

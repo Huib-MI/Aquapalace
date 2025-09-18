@@ -17,13 +17,6 @@ namespace Aquapalaca
             InitializeComponent();
         }
 
-        private void btnInloggen_Click(object sender, EventArgs e)
-        {
-            Form1 form1 = new Form1();
-            form1.Show();
-            this.Hide();
-        }
-
         private void btnAbonnementen_Click(object sender, EventArgs e)
         {
             medewerkerAbonnement MedewerkerAbonnement = new medewerkerAbonnement();
@@ -42,6 +35,13 @@ namespace Aquapalaca
         {
             medewerkerInchecken MedewerkerInchecken = new medewerkerInchecken();
             MedewerkerInchecken.Show();
+            this.Hide();
+        }
+
+        private void btnUitloggen_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
             this.Hide();
         }
     }

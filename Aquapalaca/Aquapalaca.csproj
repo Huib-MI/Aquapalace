@@ -197,6 +197,7 @@
     <Compile Include="Rolbeheer.Designer.cs">
       <DependentUpon>Rolbeheer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Session.cs" />
     <EmbeddedResource Include="Abonnementsoverzicht.resx">
       <DependentUpon>Abonnementsoverzicht.cs</DependentUpon>
     </EmbeddedResource>

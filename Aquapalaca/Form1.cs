@@ -34,6 +34,7 @@ namespace Aquapalaca
             Gebruiker gebruikersobject = Gebruiker.getLoginGebruiker(gebruikersnaam, wachtwoord);
             if (gebruikersobject != null)
             {
+                Session.HuidigeGebruiker = gebruikersobject;
                 if (gebruikersobject.Rol == "gast")
                 {
                     KlantPagina klantPagina = new KlantPagina();

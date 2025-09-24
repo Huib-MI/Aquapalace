@@ -8,7 +8,7 @@ using MySql.Data.MySqlClient;
 
 namespace Aquapalaca
 {
-    class Gebruiker
+    public class Gebruiker
     {
         public int Id;
         public string Gebruikersnaam;

@@ -17,12 +17,9 @@ namespace Aquapalaca
         public int OverigeRitten;
         public int Actief;
 
-
-
-
         public override string ToString()
         {
-            return $"Id: {Id}, KlantId: {KlantId}, TypeId: {TypeId}, StartDatum: {StartDatum.ToShortDateString()}, EindDatum: {EindDatum.ToShortDateString()}, OverigeRitten: {OverigeRitten}, Actief: {Actief}";
+            return $"Id: {Id}, KlantId: {KlantId}, TypeId: {TypeId}, StartDatum: {StartDatum.ToShortDateString()}, EindDatum: {EindDatum.ToShortDateString()}, OverigeRitten: {OverigeRitten}";
         }
 
         public static List<Abonnement> getAbonnementen()
@@ -55,8 +52,7 @@ namespace Aquapalaca
 
             return abonnementlist;
         }
-
-        public static List<Abonnement> filterAbonnementenByKlantId(int klantId)
+        public static List<Abonnement> filterAbonnementen(int klantId, int typeId)
         {
             List<Abonnement> abonnementlist = new List<Abonnement>();
 
@@ -65,8 +61,23 @@ namespace Aquapalaca
 
             MySqlCommand myCommand = new MySqlCommand();
             myCommand.Connection = con;
-            myCommand.CommandText = @"SELECT * FROM subscriptions WHERE subscription_customer_id = @klantId";
-            myCommand.Parameters.AddWithValue("@klantId", klantId);
+
+            // Bouw de query dynamisch op
+            string sql = "SELECT * FROM subscriptions WHERE 1=1";
+
+            if (klantId > 0)
+            {
+                sql += " AND subscription_customer_id = @klantId";
+                myCommand.Parameters.AddWithValue("@klantId", klantId);
+            }
+
+            if (typeId > 0)
+            {
+                sql += " AND subscription_type_id = @typeId";
+                myCommand.Parameters.AddWithValue("@typeId", typeId);
+            }
+
+            myCommand.CommandText = sql;
 
             MySqlDataReader reader = myCommand.ExecuteReader();
 
@@ -88,6 +99,7 @@ namespace Aquapalaca
 
             return abonnementlist;
         }
+
 
         public void Insert()
         {

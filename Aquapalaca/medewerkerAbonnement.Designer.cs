@@ -33,11 +33,11 @@
             this.lbxAbonnement = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbKlanten = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.btnAddAbbonement = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.cmbType = new System.Windows.Forms.ComboBox();
+            this.cmbTypes = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnTerug
@@ -79,18 +79,18 @@
             this.cmbKlanten.TabIndex = 3;
             this.cmbKlanten.SelectedIndexChanged += new System.EventHandler(this.cmbKlanten_SelectedIndexChanged);
             // 
-            // label2
+            // lblStatus
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(618, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 16);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Status abonnement:";
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(521, 24);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(125, 16);
+            this.lblStatus.TabIndex = 4;
+            this.lblStatus.Text = "Status abonnement:";
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(617, 55);
+            this.txtStatus.Location = new System.Drawing.Point(520, 55);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
             this.txtStatus.Size = new System.Drawing.Size(145, 22);
@@ -116,14 +116,15 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Filteren op Type abonnement:";
             // 
-            // cmbType
+            // cmbTypes
             // 
-            this.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbType.FormattingEnabled = true;
-            this.cmbType.Location = new System.Drawing.Point(233, 52);
-            this.cmbType.Name = "cmbType";
-            this.cmbType.Size = new System.Drawing.Size(200, 24);
-            this.cmbType.TabIndex = 8;
+            this.cmbTypes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTypes.FormattingEnabled = true;
+            this.cmbTypes.Location = new System.Drawing.Point(229, 53);
+            this.cmbTypes.Name = "cmbTypes";
+            this.cmbTypes.Size = new System.Drawing.Size(200, 24);
+            this.cmbTypes.TabIndex = 8;
+            this.cmbTypes.SelectedIndexChanged += new System.EventHandler(this.cmbTypes_SelectedIndexChanged);
             // 
             // medewerkerAbonnement
             // 
@@ -131,11 +132,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1076, 450);
-            this.Controls.Add(this.cmbType);
+            this.Controls.Add(this.cmbTypes);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnAddAbbonement);
             this.Controls.Add(this.txtStatus);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.cmbKlanten);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbxAbonnement);
@@ -153,10 +154,10 @@
         private System.Windows.Forms.ListBox lbxAbonnement;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbKlanten;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Button btnAddAbbonement;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmbType;
+        private System.Windows.Forms.ComboBox cmbTypes;
     }
 }

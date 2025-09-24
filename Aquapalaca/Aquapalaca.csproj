@@ -108,6 +108,7 @@
     <Compile Include="Abonnementsoverzicht.Designer.cs">
       <DependentUpon>Abonnementsoverzicht.cs</DependentUpon>
     </Compile>
+    <Compile Include="AbonnementType.cs" />
     <Compile Include="beheerPagina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="medewerkerKlanten.resx">
       <DependentUpon>medewerkerKlanten.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedewerkerNieuwAbonnement.resx">
+      <DependentUpon>MedewerkerNieuwAbonnement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="medewerkerPagina.resx">
       <DependentUpon>medewerkerPagina.cs</DependentUpon>

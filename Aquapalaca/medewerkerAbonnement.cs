@@ -17,6 +17,8 @@ namespace Aquapalaca
         {
             InitializeComponent();
             cmbKlanten.Items.Add("Alle klanten");
+            txtStatus.Hide();
+            lblStatus.Hide();
             foreach (Abonnement abonnement in Abonnement.getAbonnementen())
             {
                 lbxAbonnement.Items.Add(abonnement);
@@ -31,7 +33,20 @@ namespace Aquapalaca
             {
                 cmbKlanten.SelectedIndex = 0;
             }
+
+            cmbTypes.Items.Add("Alle types");
+            foreach (AbonnementType type in AbonnementType.getTypes())
+            {
+                cmbTypes.Items.Add(type);
+            }
+
+            if (cmbTypes.Items.Count > 0)
+            {
+                cmbTypes.SelectedIndex = 0;
+            }
+
         }
+
 
         private void btnTerug_Click(object sender, EventArgs e)
         {
@@ -42,9 +57,11 @@ namespace Aquapalaca
 
         private void lbxAbonnement_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtStatus.Text = "";
             if (lbxAbonnement.SelectedItem is Abonnement geselecteerdAbonnement)
             {
+                txtStatus.Show();
+                lblStatus.Show();
+
                 if (geselecteerdAbonnement.Actief == 1)
                 {
                     txtStatus.Text = "Actief";
@@ -58,6 +75,11 @@ namespace Aquapalaca
                     txtStatus.Text = "";
                 }
             }
+            else
+            {
+                txtStatus.Hide();
+                lblStatus.Hide();
+            }
         }
 
         private void btnAddAbbonement_Click(object sender, EventArgs e)
@@ -66,24 +88,42 @@ namespace Aquapalaca
             medewerkerNieuwAbonnement.Show();
         }
 
+        private void FilterAbonnementen()
+        {
+            lbxAbonnement.Items.Clear();
+
+            int klantId = 0;
+            int typeId = 0;
+
+            if (cmbKlanten.SelectedItem is Klanten geselecteerdeKlant)
+                klantId = geselecteerdeKlant.Id;
+
+            if (cmbTypes.SelectedItem is AbonnementType geselecteerdType)
+                typeId = geselecteerdType.Id;
+
+            List<Abonnement> filtered = Abonnement.filterAbonnementen(klantId, typeId);
+
+            foreach (Abonnement abonnement in filtered)
+            {
+                lbxAbonnement.Items.Add(abonnement);
+            }
+
+            lbxAbonnement.ClearSelected();
+            txtStatus.Hide();
+            lblStatus.Hide();
+        }
+
+
         private void cmbKlanten_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtStatus.Text = "";
-            lbxAbonnement.Items.Clear();
-            if (cmbKlanten.SelectedItem is "Alle klanten")
-            {
-                foreach (Abonnement abonnement in Abonnement.getAbonnementen())
-                {
-                    lbxAbonnement.Items.Add(abonnement);
-                }
-            }
-            if (cmbKlanten.SelectedItem is Klanten geselecteerdeKlant)
-            {
-                foreach (Abonnement abonnement in Abonnement.filterAbonnementenByKlantId(geselecteerdeKlant.Id))
-                {
-                    lbxAbonnement.Items.Add(abonnement);
-                }
-            }
+            FilterAbonnementen();
+        }
+
+        private void cmbTypes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtStatus.Text = "";
+            FilterAbonnementen();
         }
     }
 }

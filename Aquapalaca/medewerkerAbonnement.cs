@@ -104,7 +104,7 @@ namespace Aquapalaca
         private void btnAddAbbonement_Click(object sender, EventArgs e)
         {
             MedewerkerNieuwAbonnement medewerkerNieuwAbonnement = new MedewerkerNieuwAbonnement();
-            medewerkerNieuwAbonnement.Show();
+            medewerkerNieuwAbonnement.ShowDialog();
         }
 
         private void FilterAbonnementen()

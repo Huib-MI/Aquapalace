@@ -69,7 +69,7 @@ namespace Aquapalaca
             {
                 lbxAbonnement.Items.Clear();
 
-                foreach (Abonnement abonnement in Abonnement.GetAbonnementenByCustomerId(geselecteerdeKlant.Id))
+                foreach (Abonnement abonnement in Abonnement.getAbonnementenByCustomerId(geselecteerdeKlant.Id))
                 {
                     lbxAbonnement.Items.Add(abonnement);
                 }

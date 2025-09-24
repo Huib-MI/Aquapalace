@@ -36,6 +36,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.btnAddAbbonement = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbType = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnTerug
@@ -80,7 +82,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(247, 24);
+            this.label2.Location = new System.Drawing.Point(618, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 16);
             this.label2.TabIndex = 4;
@@ -88,7 +90,7 @@
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(246, 55);
+            this.txtStatus.Location = new System.Drawing.Point(617, 55);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
             this.txtStatus.Size = new System.Drawing.Size(145, 22);
@@ -105,12 +107,32 @@
             this.btnAddAbbonement.UseVisualStyleBackColor = false;
             this.btnAddAbbonement.Click += new System.EventHandler(this.btnAddAbbonement_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(230, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(186, 16);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Filteren op Type abonnement:";
+            // 
+            // cmbType
+            // 
+            this.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbType.FormattingEnabled = true;
+            this.cmbType.Location = new System.Drawing.Point(233, 52);
+            this.cmbType.Name = "cmbType";
+            this.cmbType.Size = new System.Drawing.Size(200, 24);
+            this.cmbType.TabIndex = 8;
+            // 
             // medewerkerAbonnement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1076, 450);
+            this.Controls.Add(this.cmbType);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnAddAbbonement);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.label2);
@@ -134,5 +156,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Button btnAddAbbonement;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cmbType;
     }
 }

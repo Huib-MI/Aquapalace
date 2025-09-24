@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,7 @@ namespace Aquapalaca
         public medewerkerAbonnement()
         {
             InitializeComponent();
+            cmbKlanten.Items.Add("Alle klanten");
             foreach (Abonnement abonnement in Abonnement.getAbonnementen())
             {
                 lbxAbonnement.Items.Add(abonnement);
@@ -40,6 +42,7 @@ namespace Aquapalaca
 
         private void lbxAbonnement_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txtStatus.Text = "";
             if (lbxAbonnement.SelectedItem is Abonnement geselecteerdAbonnement)
             {
                 if (geselecteerdAbonnement.Actief == 1)
@@ -65,11 +68,18 @@ namespace Aquapalaca
 
         private void cmbKlanten_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txtStatus.Text = "";
+            lbxAbonnement.Items.Clear();
+            if (cmbKlanten.SelectedItem is "Alle klanten")
+            {
+                foreach (Abonnement abonnement in Abonnement.getAbonnementen())
+                {
+                    lbxAbonnement.Items.Add(abonnement);
+                }
+            }
             if (cmbKlanten.SelectedItem is Klanten geselecteerdeKlant)
             {
-                lbxAbonnement.Items.Clear();
-
-                foreach (Abonnement abonnement in Abonnement.getAbonnementenByCustomerId(geselecteerdeKlant.Id))
+                foreach (Abonnement abonnement in Abonnement.filterAbonnementenByKlantId(geselecteerdeKlant.Id))
                 {
                     lbxAbonnement.Items.Add(abonnement);
                 }

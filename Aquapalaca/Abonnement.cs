@@ -56,7 +56,7 @@ namespace Aquapalaca
             return abonnementlist;
         }
 
-        public static List<Abonnement> getAbonnementenByCustomerId(int klantId)
+        public static List<Abonnement> filterAbonnementenByKlantId(int klantId)
         {
             List<Abonnement> abonnementlist = new List<Abonnement>();
 

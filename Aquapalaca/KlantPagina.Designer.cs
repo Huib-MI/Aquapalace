@@ -76,8 +76,9 @@
             this.lblPersoon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPersoon.Location = new System.Drawing.Point(177, 92);
             this.lblPersoon.Name = "lblPersoon";
-            this.lblPersoon.Size = new System.Drawing.Size(0, 29);
+            this.lblPersoon.Size = new System.Drawing.Size(147, 29);
             this.lblPersoon.TabIndex = 2;
+            this.lblPersoon.Text = "Placeholder";
             // 
             // lblAbonnement
             // 
@@ -160,7 +161,7 @@
             // 
             this.LblRittenkaart.AutoSize = true;
             this.LblRittenkaart.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblRittenkaart.Location = new System.Drawing.Point(100, 254);
+            this.LblRittenkaart.Location = new System.Drawing.Point(100, 248);
             this.LblRittenkaart.Name = "LblRittenkaart";
             this.LblRittenkaart.Size = new System.Drawing.Size(85, 17);
             this.LblRittenkaart.TabIndex = 9;
@@ -187,17 +188,16 @@
             this.lblAquaPalace.Size = new System.Drawing.Size(160, 29);
             this.lblAquaPalace.TabIndex = 14;
             this.lblAquaPalace.Text = "AquaPalace";
-            this.lblAquaPalace.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // lblJaarOutput
             // 
             this.lblJaarOutput.AutoSize = true;
             this.lblJaarOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJaarOutput.Location = new System.Drawing.Point(100, 213);
+            this.lblJaarOutput.Location = new System.Drawing.Point(100, 220);
             this.lblJaarOutput.Name = "lblJaarOutput";
-            this.lblJaarOutput.Size = new System.Drawing.Size(0, 15);
+            this.lblJaarOutput.Size = new System.Drawing.Size(73, 15);
             this.lblJaarOutput.TabIndex = 15;
-            this.lblJaarOutput.Click += new System.EventHandler(this.label1_Click_2);
+            this.lblJaarOutput.Text = "Placeholder";
             // 
             // lblRittenkaartOutput
             // 
@@ -205,9 +205,9 @@
             this.lblRittenkaartOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRittenkaartOutput.Location = new System.Drawing.Point(100, 271);
             this.lblRittenkaartOutput.Name = "lblRittenkaartOutput";
-            this.lblRittenkaartOutput.Size = new System.Drawing.Size(0, 15);
+            this.lblRittenkaartOutput.Size = new System.Drawing.Size(73, 15);
             this.lblRittenkaartOutput.TabIndex = 16;
-            this.lblRittenkaartOutput.Click += new System.EventHandler(this.lblRittenkaartOutput_Click);
+            this.lblRittenkaartOutput.Text = "Placeholder";
             // 
             // KlantPagina
             // 

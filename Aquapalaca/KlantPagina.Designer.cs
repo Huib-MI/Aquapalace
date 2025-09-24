@@ -65,16 +65,16 @@
             this.lblWelkom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelkom.Location = new System.Drawing.Point(57, 92);
             this.lblWelkom.Name = "lblWelkom";
-            this.lblWelkom.Size = new System.Drawing.Size(113, 29);
+            this.lblWelkom.Size = new System.Drawing.Size(106, 29);
             this.lblWelkom.TabIndex = 0;
-            this.lblWelkom.Text = "Welkom:";
+            this.lblWelkom.Text = "Welkom";
             this.lblWelkom.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblPersoon
             // 
             this.lblPersoon.AutoSize = true;
             this.lblPersoon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersoon.Location = new System.Drawing.Point(177, 92);
+            this.lblPersoon.Location = new System.Drawing.Point(160, 92);
             this.lblPersoon.Name = "lblPersoon";
             this.lblPersoon.Size = new System.Drawing.Size(147, 29);
             this.lblPersoon.TabIndex = 2;

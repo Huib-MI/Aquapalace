@@ -15,6 +15,10 @@ namespace Aquapalaca
         public medewerkerAbonnement()
         {
             InitializeComponent();
+            foreach (Abonnement abonnement in Abonnement.getAbonnementen())
+            {
+                lbxAbonnement.Items.Add(abonnement);
+            }
         }
 
         private void btnTerug_Click(object sender, EventArgs e)

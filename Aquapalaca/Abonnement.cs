@@ -25,9 +25,6 @@ namespace Aquapalaca
             return $"Id: {Id}, KlantId: {KlantId}, TypeId: {TypeId}, StartDatum: {StartDatum.ToShortDateString()}, EindDatum: {EindDatum.ToShortDateString()}, OverigeRitten: {OverigeRitten}, Actief: {Actief}";
         }
 
-
-
-
         public static List<Abonnement> getAbonnementen()
         {
             List<Abonnement> abonnementlist = new List<Abonnement>();
@@ -51,6 +48,39 @@ namespace Aquapalaca
                 abonnementobject.EindDatum = reader["subscription_end_date"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(reader["subscription_end_date"]);
                 abonnementobject.OverigeRitten = reader["subscription_remaining_rides"] == DBNull.Value ? 0 : Convert.ToInt32(reader["subscription_remaining_rides"]);
                 abonnementobject.Actief = reader["subscription_active"] == DBNull.Value ? 0 : Convert.ToInt32(reader["subscription_active"]);
+                abonnementlist.Add(abonnementobject);
+            }
+
+            con.Close();
+
+            return abonnementlist;
+        }
+
+        public static List<Abonnement> filterAbonnementenByKlantId(int klantId)
+        {
+            List<Abonnement> abonnementlist = new List<Abonnement>();
+
+            MySqlConnection con = Databases.start();
+            con.Open();
+
+            MySqlCommand myCommand = new MySqlCommand();
+            myCommand.Connection = con;
+            myCommand.CommandText = @"SELECT * FROM subscriptions WHERE subscription_customer_id = @klantId";
+            myCommand.Parameters.AddWithValue("@klantId", klantId);
+
+            MySqlDataReader reader = myCommand.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Abonnement abonnementobject = new Abonnement();
+                abonnementobject.Id = reader["subscription_id"] == DBNull.Value ? 0 : Convert.ToInt32(reader["subscription_id"]);
+                abonnementobject.KlantId = reader["subscription_customer_id"] == DBNull.Value ? 0 : Convert.ToInt32(reader["subscription_customer_id"]);
+                abonnementobject.TypeId = reader["subscription_type_id"] == DBNull.Value ? 0 : Convert.ToInt32(reader["subscription_type_id"]);
+                abonnementobject.StartDatum = reader["subscription_start_date"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(reader["subscription_start_date"]);
+                abonnementobject.EindDatum = reader["subscription_end_date"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(reader["subscription_end_date"]);
+                abonnementobject.OverigeRitten = reader["subscription_remaining_rides"] == DBNull.Value ? 0 : Convert.ToInt32(reader["subscription_remaining_rides"]);
+                abonnementobject.Actief = reader["subscription_active"] == DBNull.Value ? 0 : Convert.ToInt32(reader["subscription_active"]);
+
                 abonnementlist.Add(abonnementobject);
             }
 

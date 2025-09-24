@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,9 +16,20 @@ namespace Aquapalaca
         public medewerkerAbonnement()
         {
             InitializeComponent();
+            cmbKlanten.Items.Add("Alle klanten");
             foreach (Abonnement abonnement in Abonnement.getAbonnementen())
             {
                 lbxAbonnement.Items.Add(abonnement);
+            }
+
+            foreach (Klanten klant in Klanten.getCustomers())
+            {
+                cmbKlanten.Items.Add(klant);
+            }
+
+            if (cmbKlanten.Items.Count > 0)
+            {
+                cmbKlanten.SelectedIndex = 0;
             }
         }
 
@@ -26,6 +38,52 @@ namespace Aquapalaca
             medewerkerPagina MedewerkerPagina = new medewerkerPagina();
             MedewerkerPagina.Show();
             this.Hide();
+        }
+
+        private void lbxAbonnement_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtStatus.Text = "";
+            if (lbxAbonnement.SelectedItem is Abonnement geselecteerdAbonnement)
+            {
+                if (geselecteerdAbonnement.Actief == 1)
+                {
+                    txtStatus.Text = "Actief";
+                }
+                else if (geselecteerdAbonnement.Actief == 0)
+                {
+                    txtStatus.Text = "Inactief";
+                }
+                else
+                {
+                    txtStatus.Text = "";
+                }
+            }
+        }
+
+        private void btnAddAbbonement_Click(object sender, EventArgs e)
+        {
+            MedewerkerNieuwAbonnement medewerkerNieuwAbonnement = new MedewerkerNieuwAbonnement();
+            medewerkerNieuwAbonnement.Show();
+        }
+
+        private void cmbKlanten_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtStatus.Text = "";
+            lbxAbonnement.Items.Clear();
+            if (cmbKlanten.SelectedItem is "Alle klanten")
+            {
+                foreach (Abonnement abonnement in Abonnement.getAbonnementen())
+                {
+                    lbxAbonnement.Items.Add(abonnement);
+                }
+            }
+            if (cmbKlanten.SelectedItem is Klanten geselecteerdeKlant)
+            {
+                foreach (Abonnement abonnement in Abonnement.filterAbonnementenByKlantId(geselecteerdeKlant.Id))
+                {
+                    lbxAbonnement.Items.Add(abonnement);
+                }
+            }
         }
     }
 }

@@ -122,6 +122,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Gebruiker.cs" />
+    <Compile Include="Klanten.cs" />
     <Compile Include="Klantenoverzicht.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +176,12 @@
     </Compile>
     <Compile Include="medewerkerKlanten.Designer.cs">
       <DependentUpon>medewerkerKlanten.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedewerkerNieuwAbonnement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedewerkerNieuwAbonnement.Designer.cs">
+      <DependentUpon>MedewerkerNieuwAbonnement.cs</DependentUpon>
     </Compile>
     <Compile Include="medewerkerPagina.cs">
       <SubType>Form</SubType>

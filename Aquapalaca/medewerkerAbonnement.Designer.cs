@@ -28,8 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(medewerkerAbonnement));
             this.btnTerug = new System.Windows.Forms.Button();
             this.lbxAbonnement = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbKlanten = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.btnAddAbbonement = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnTerug
@@ -46,22 +52,76 @@
             // 
             this.lbxAbonnement.FormattingEnabled = true;
             this.lbxAbonnement.ItemHeight = 16;
-            this.lbxAbonnement.Location = new System.Drawing.Point(12, 28);
+            this.lbxAbonnement.Location = new System.Drawing.Point(12, 92);
             this.lbxAbonnement.Name = "lbxAbonnement";
-            this.lbxAbonnement.Size = new System.Drawing.Size(892, 388);
+            this.lbxAbonnement.Size = new System.Drawing.Size(831, 324);
             this.lbxAbonnement.TabIndex = 1;
+            this.lbxAbonnement.SelectedIndexChanged += new System.EventHandler(this.lbxAbonnement_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 16);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Filteren op klant:";
+            // 
+            // cmbKlanten
+            // 
+            this.cmbKlanten.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKlanten.FormattingEnabled = true;
+            this.cmbKlanten.Location = new System.Drawing.Point(11, 53);
+            this.cmbKlanten.Name = "cmbKlanten";
+            this.cmbKlanten.Size = new System.Drawing.Size(152, 24);
+            this.cmbKlanten.TabIndex = 3;
+            this.cmbKlanten.SelectedIndexChanged += new System.EventHandler(this.cmbKlanten_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(247, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(125, 16);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Status abonnement:";
+            // 
+            // txtStatus
+            // 
+            this.txtStatus.Location = new System.Drawing.Point(246, 55);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.ReadOnly = true;
+            this.txtStatus.Size = new System.Drawing.Size(145, 22);
+            this.txtStatus.TabIndex = 5;
+            // 
+            // btnAddAbbonement
+            // 
+            this.btnAddAbbonement.BackColor = System.Drawing.Color.LightGreen;
+            this.btnAddAbbonement.Location = new System.Drawing.Point(922, 245);
+            this.btnAddAbbonement.Name = "btnAddAbbonement";
+            this.btnAddAbbonement.Size = new System.Drawing.Size(142, 71);
+            this.btnAddAbbonement.TabIndex = 6;
+            this.btnAddAbbonement.Text = "Abonnement Toevoegen";
+            this.btnAddAbbonement.UseVisualStyleBackColor = false;
+            this.btnAddAbbonement.Click += new System.EventHandler(this.btnAddAbbonement_Click);
             // 
             // medewerkerAbonnement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Aquapalaca.Properties.Resources.output;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1076, 450);
+            this.Controls.Add(this.btnAddAbbonement);
+            this.Controls.Add(this.txtStatus);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cmbKlanten);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lbxAbonnement);
             this.Controls.Add(this.btnTerug);
             this.Name = "medewerkerAbonnement";
             this.Text = "medewerkerAbonnement";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -69,5 +129,10 @@
 
         private System.Windows.Forms.Button btnTerug;
         private System.Windows.Forms.ListBox lbxAbonnement;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbKlanten;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.Button btnAddAbbonement;
     }
 }

@@ -187,7 +187,7 @@
             this.lblAquaPalace.Size = new System.Drawing.Size(160, 29);
             this.lblAquaPalace.TabIndex = 14;
             this.lblAquaPalace.Text = "AquaPalace";
-            this.lblAquaPalace.Click += new System.EventHandler(this.label1_Click_1);
+            //this.lblAquaPalace.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // lblJaarOutput
             // 
@@ -197,7 +197,7 @@
             this.lblJaarOutput.Name = "lblJaarOutput";
             this.lblJaarOutput.Size = new System.Drawing.Size(0, 15);
             this.lblJaarOutput.TabIndex = 15;
-            this.lblJaarOutput.Click += new System.EventHandler(this.label1_Click_2);
+            //this.lblJaarOutput.Click += new System.EventHandler(this.label1_Click_2);
             // 
             // lblRittenkaartOutput
             // 
@@ -207,7 +207,7 @@
             this.lblRittenkaartOutput.Name = "lblRittenkaartOutput";
             this.lblRittenkaartOutput.Size = new System.Drawing.Size(0, 15);
             this.lblRittenkaartOutput.TabIndex = 16;
-            this.lblRittenkaartOutput.Click += new System.EventHandler(this.lblRittenkaartOutput_Click);
+            //this.lblRittenkaartOutput.Click += new System.EventHandler(this.lblRittenkaartOutput_Click);
             // 
             // KlantPagina
             // 

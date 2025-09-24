@@ -62,7 +62,6 @@ namespace Aquapalaca
             MySqlCommand myCommand = new MySqlCommand();
             myCommand.Connection = con;
 
-            // Bouw de query dynamisch op
             string sql = "SELECT * FROM subscriptions WHERE 1=1";
 
             if (klantId > 0)
@@ -98,6 +97,25 @@ namespace Aquapalaca
             con.Close();
 
             return abonnementlist;
+        }
+
+        public void KoppelKlant(int newKlantId)
+        {
+            MySqlConnection con = Databases.start();
+            con.Open();
+
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = @"UPDATE subscriptions 
+                        SET subscription_customer_id = @newKlantId 
+                        WHERE subscription_id = @subscriptionId";
+            cmd.Parameters.AddWithValue("@newKlantId", newKlantId);
+            cmd.Parameters.AddWithValue("@subscriptionId", this.Id);
+
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            this.KlantId = newKlantId;
         }
 
 

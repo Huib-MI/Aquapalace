@@ -127,11 +127,14 @@
   <data name="d03936d8f95169c8f3ea8379e47936df" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\d03936d8f95169c8f3ea8379e47936df.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Menik Y-9 Achtergrond Doek Grijs 1-385x385" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menik Y-9 Achtergrond Doek Grijs 1-385x385.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="output" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\output.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pngtree-abstract-gradient-pattern-navy-blue-background-image_632934" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pngtree-abstract-gradient-pattern-navy-blue-background-image_632934.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="003366" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\003366.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="3a1b12fa-d009-4264-8238-0820842ed812" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3a1b12fa-d009-4264-8238-0820842ed812.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,10 +142,10 @@
   <data name="F004374a-600x600" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\F004374a-600x600.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Menik Y-9 Achtergrond Doek Grijs 1-385x385" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Menik Y-9 Achtergrond Doek Grijs 1-385x385.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pngtree-abstract-gradient-pattern-navy-blue-background-image_632934" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-abstract-gradient-pattern-navy-blue-background-image_632934.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="003366" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\003366.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="deselect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\deselect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

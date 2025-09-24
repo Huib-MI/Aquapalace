@@ -20,7 +20,7 @@ namespace Aquapalaca
                 lbxAbonnement.Items.Add(abonnement);
             }
 
-            foreach (Klanten klant in Klanten.GetCustomers())
+            foreach (Klanten klant in Klanten.getCustomers())
             {
                 cmbKlanten.Items.Add(klant);
             }

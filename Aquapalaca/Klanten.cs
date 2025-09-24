@@ -18,7 +18,7 @@ namespace Aquapalaca
             return $"{Firstname} {Lastname}";
         }
 
-        public static List<Klanten> GetCustomers()
+        public static List<Klanten> getCustomers()
         {
             List<Klanten> customers = new List<Klanten>();
 

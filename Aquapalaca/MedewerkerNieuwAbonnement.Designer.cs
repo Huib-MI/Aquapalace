@@ -28,10 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // MedewerkerNieuwAbonnement
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::Aquapalaca.Properties.Resources.output;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(407, 450);
+            this.Name = "MedewerkerNieuwAbonnement";
             this.Text = "MedewerkerNieuwAbonnement";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

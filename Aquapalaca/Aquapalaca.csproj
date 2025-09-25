@@ -178,11 +178,11 @@
     <Compile Include="medewerkerKlanten.Designer.cs">
       <DependentUpon>medewerkerKlanten.cs</DependentUpon>
     </Compile>
-    <Compile Include="MedewerkerNieuwAbonnement.cs">
+    <Compile Include="medewerkerNieuwAbonnement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MedewerkerNieuwAbonnement.Designer.cs">
-      <DependentUpon>MedewerkerNieuwAbonnement.cs</DependentUpon>
+    <Compile Include="medewerkerNieuwAbonnement.Designer.cs">
+      <DependentUpon>medewerkerNieuwAbonnement.cs</DependentUpon>
     </Compile>
     <Compile Include="medewerkerPagina.cs">
       <SubType>Form</SubType>
@@ -236,8 +236,8 @@
     <EmbeddedResource Include="medewerkerKlanten.resx">
       <DependentUpon>medewerkerKlanten.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MedewerkerNieuwAbonnement.resx">
-      <DependentUpon>MedewerkerNieuwAbonnement.cs</DependentUpon>
+    <EmbeddedResource Include="medewerkerNieuwAbonnement.resx">
+      <DependentUpon>medewerkerNieuwAbonnement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="medewerkerPagina.resx">
       <DependentUpon>medewerkerPagina.cs</DependentUpon>

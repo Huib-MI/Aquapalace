@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,6 +44,11 @@ namespace Aquapalaca
             medewerkerInchecken MedewerkerInchecken = new medewerkerInchecken();
             MedewerkerInchecken.Show();
             this.Hide();
+        }
+
+        private void medewerkerPagina_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnInloggen = new System.Windows.Forms.Button();
+            this.btnUitloggen = new System.Windows.Forms.Button();
             this.btnAbonnementen = new System.Windows.Forms.Button();
             this.btnKlanten = new System.Windows.Forms.Button();
             this.btnInchecken = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnInloggen
+            // btnUitloggen
             // 
-            this.btnInloggen.Location = new System.Drawing.Point(605, 318);
-            this.btnInloggen.Name = "btnInloggen";
-            this.btnInloggen.Size = new System.Drawing.Size(137, 91);
-            this.btnInloggen.TabIndex = 0;
-            this.btnInloggen.Text = "Uitloggen";
-            this.btnInloggen.UseVisualStyleBackColor = true;
-            this.btnInloggen.Click += new System.EventHandler(this.btnInloggen_Click);
+            this.btnUitloggen.Location = new System.Drawing.Point(605, 318);
+            this.btnUitloggen.Name = "btnUitloggen";
+            this.btnUitloggen.Size = new System.Drawing.Size(137, 91);
+            this.btnUitloggen.TabIndex = 0;
+            this.btnUitloggen.Text = "Uitloggen";
+            this.btnUitloggen.UseVisualStyleBackColor = true;
+            this.btnUitloggen.Click += new System.EventHandler(this.btnInloggen_Click);
             // 
             // btnAbonnementen
             // 
             this.btnAbonnementen.Location = new System.Drawing.Point(37, 42);
             this.btnAbonnementen.Name = "btnAbonnementen";
-            this.btnAbonnementen.Size = new System.Drawing.Size(142, 56);
+            this.btnAbonnementen.Size = new System.Drawing.Size(169, 58);
             this.btnAbonnementen.TabIndex = 1;
             this.btnAbonnementen.Text = "Abonnementen";
             this.btnAbonnementen.UseVisualStyleBackColor = true;
@@ -56,9 +56,9 @@
             // 
             // btnKlanten
             // 
-            this.btnKlanten.Location = new System.Drawing.Point(266, 42);
+            this.btnKlanten.Location = new System.Drawing.Point(37, 118);
             this.btnKlanten.Name = "btnKlanten";
-            this.btnKlanten.Size = new System.Drawing.Size(141, 56);
+            this.btnKlanten.Size = new System.Drawing.Size(169, 56);
             this.btnKlanten.TabIndex = 2;
             this.btnKlanten.Text = "Klanten";
             this.btnKlanten.UseVisualStyleBackColor = true;
@@ -66,9 +66,9 @@
             // 
             // btnInchecken
             // 
-            this.btnInchecken.Location = new System.Drawing.Point(443, 42);
+            this.btnInchecken.Location = new System.Drawing.Point(37, 203);
             this.btnInchecken.Name = "btnInchecken";
-            this.btnInchecken.Size = new System.Drawing.Size(136, 56);
+            this.btnInchecken.Size = new System.Drawing.Size(169, 56);
             this.btnInchecken.TabIndex = 3;
             this.btnInchecken.Text = "Inchecken";
             this.btnInchecken.UseVisualStyleBackColor = true;
@@ -82,16 +82,17 @@
             this.Controls.Add(this.btnInchecken);
             this.Controls.Add(this.btnKlanten);
             this.Controls.Add(this.btnAbonnementen);
-            this.Controls.Add(this.btnInloggen);
+            this.Controls.Add(this.btnUitloggen);
             this.Name = "medewerkerPagina";
             this.Text = "medewerkerPagina";
+            this.Load += new System.EventHandler(this.medewerkerPagina_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnInloggen;
+        private System.Windows.Forms.Button btnUitloggen;
         private System.Windows.Forms.Button btnAbonnementen;
         private System.Windows.Forms.Button btnKlanten;
         private System.Windows.Forms.Button btnInchecken;

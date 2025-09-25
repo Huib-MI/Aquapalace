@@ -114,6 +114,7 @@
     <Compile Include="beheerPagina.Designer.cs">
       <DependentUpon>beheerPagina.cs</DependentUpon>
     </Compile>
+    <Compile Include="CheckIn.cs" />
     <Compile Include="Databases.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

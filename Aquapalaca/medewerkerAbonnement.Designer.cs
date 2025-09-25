@@ -165,9 +165,9 @@
             this.btnDeselect.BackColor = System.Drawing.Color.MistyRose;
             this.btnDeselect.BackgroundImage = global::Aquapalaca.Properties.Resources.deselect;
             this.btnDeselect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDeselect.Location = new System.Drawing.Point(777, 39);
+            this.btnDeselect.Location = new System.Drawing.Point(777, 24);
             this.btnDeselect.Name = "btnDeselect";
-            this.btnDeselect.Size = new System.Drawing.Size(66, 47);
+            this.btnDeselect.Size = new System.Drawing.Size(66, 62);
             this.btnDeselect.TabIndex = 12;
             this.btnDeselect.UseVisualStyleBackColor = false;
             this.btnDeselect.Click += new System.EventHandler(this.btnDeselect_Click);

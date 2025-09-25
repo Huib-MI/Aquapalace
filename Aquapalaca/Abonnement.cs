@@ -121,27 +121,25 @@ namespace Aquapalaca
 
         public void Insert()
         {
-
-            //Werkt nog niet
             using (MySqlConnection con = Databases.start())
             {
                 con.Open();
 
                 string sql = @"INSERT INTO subscriptions (
-                            subscription_customer_id, 
-                            subscription_type_id, 
-                            subscription_start_date,
-                            subscription_end_date,
-                            subscription_remaining_rides,
-                            subscription_active
-                       ) VALUES (
-                            @KlantId, 
-                            @TypeId, 
-                            @StartDatum,
-                            @EindDatum,
-                            @OverigeRitten,
-                            @Actief
-                       )";
+                        subscription_customer_id, 
+                        subscription_type_id, 
+                        subscription_start_date,
+                        subscription_end_date,
+                        subscription_remaining_rides,
+                        subscription_active
+                   ) VALUES (
+                        @KlantId, 
+                        @TypeId, 
+                        @StartDatum,
+                        @EindDatum,
+                        @OverigeRitten,
+                        @Actief
+                   )";
 
                 using (MySqlCommand cmd = new MySqlCommand(sql, con))
                 {

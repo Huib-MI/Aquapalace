@@ -103,8 +103,13 @@ namespace Aquapalaca
 
         private void btnAddAbbonement_Click(object sender, EventArgs e)
         {
-            MedewerkerNieuwAbonnement medewerkerNieuwAbonnement = new MedewerkerNieuwAbonnement();
-            medewerkerNieuwAbonnement.ShowDialog();
+            btnDeselect_Click(sender, e);
+
+            using (MedewerkerNieuwAbonnement medewerkerNieuwAbonnement = new MedewerkerNieuwAbonnement())
+            {
+                var result = medewerkerNieuwAbonnement.ShowDialog();
+                FilterAbonnementen();
+            }
         }
 
         private void FilterAbonnementen()

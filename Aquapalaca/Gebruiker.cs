@@ -15,6 +15,10 @@ namespace Aquapalaca
         public string Hashwachtwoord;
         public string Rol;
         public DateTime CreatedAt;
+        public override string ToString()
+        {
+            return $"Id = {this.Id}    Gebruikersnaam = {this.Gebruikersnaam}    Rol = {this.Rol}";
+        }
 
         public static Gebruiker getLoginGebruiker(string gebruikersnaam, string wachtwoord)
         {
@@ -76,6 +80,48 @@ namespace Aquapalaca
 
             return gebruikerlist;
         }
+
+        public void wijzigen()
+        {
+            MySqlConnection con = Databases.start();
+            con.Open();
+            MySqlCommand myCommand = new MySqlCommand();
+            myCommand.Connection = con;
+            myCommand.CommandText = @"UPDATE users SET user_username = @Gebruikersnaam, user_password_hash = @Wachtwoord, user_role = @Rol, user_created_at = @GemaaktOp WHERE user_id = @Id";
+            myCommand.Parameters.AddWithValue("@Gebruikersnaam", this.Gebruikersnaam);
+            myCommand.Parameters.AddWithValue("@Wachtwoord", this.Hashwachtwoord);
+            myCommand.Parameters.AddWithValue("@Rol", this.Rol);
+            myCommand.Parameters.AddWithValue("@GemaaktOp", this.CreatedAt);
+            myCommand.Parameters.AddWithValue("@Id", this.Id);
+            myCommand.ExecuteNonQuery();
+            myCommand.Dispose();
+            con.Close();
+        }
+
+        public static List<Gebruiker> OphalenDropDown()
+        {
+            List<Gebruiker> geblist = new List<Gebruiker>();
+
+            MySqlConnection con = Databases.start();
+            con.Open();
+
+            MySqlCommand myCommand = new MySqlCommand();
+            myCommand.Connection = con;
+            myCommand.CommandText = @"SELECT DISTINCT(user_role) FROM users;";
+
+            MySqlDataReader reader = myCommand.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Gebruiker gebobj = new Gebruiker();
+                gebobj.Rol = Convert.ToString(reader["user_role"]);
+                geblist.Add(gebobj);
+            }
+
+            con.Close();
+            return geblist;
+        }
+
 
 
 

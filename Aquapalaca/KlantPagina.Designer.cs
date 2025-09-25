@@ -62,6 +62,7 @@
             // lblWelkom
             // 
             this.lblWelkom.AutoSize = true;
+            this.lblWelkom.BackColor = System.Drawing.Color.Transparent;
             this.lblWelkom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelkom.Location = new System.Drawing.Point(57, 92);
             this.lblWelkom.Name = "lblWelkom";
@@ -73,6 +74,7 @@
             // lblPersoon
             // 
             this.lblPersoon.AutoSize = true;
+            this.lblPersoon.BackColor = System.Drawing.Color.Transparent;
             this.lblPersoon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPersoon.Location = new System.Drawing.Point(160, 92);
             this.lblPersoon.Name = "lblPersoon";
@@ -83,10 +85,11 @@
             // lblAbonnement
             // 
             this.lblAbonnement.AutoSize = true;
-            this.lblAbonnement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAbonnement.BackColor = System.Drawing.Color.Transparent;
+            this.lblAbonnement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAbonnement.Location = new System.Drawing.Point(98, 151);
             this.lblAbonnement.Name = "lblAbonnement";
-            this.lblAbonnement.Size = new System.Drawing.Size(187, 25);
+            this.lblAbonnement.Size = new System.Drawing.Size(204, 25);
             this.lblAbonnement.TabIndex = 3;
             this.lblAbonnement.Text = "Mijn Abonnementen";
             this.lblAbonnement.Click += new System.EventHandler(this.lblAbonnement_Click);
@@ -150,25 +153,28 @@
             // lblJaarAbonnement
             // 
             this.lblJaarAbonnement.AutoSize = true;
-            this.lblJaarAbonnement.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJaarAbonnement.BackColor = System.Drawing.Color.Transparent;
+            this.lblJaarAbonnement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJaarAbonnement.Location = new System.Drawing.Point(100, 196);
             this.lblJaarAbonnement.Name = "lblJaarAbonnement";
-            this.lblJaarAbonnement.Size = new System.Drawing.Size(188, 17);
+            this.lblJaarAbonnement.Size = new System.Drawing.Size(202, 16);
             this.lblJaarAbonnement.TabIndex = 8;
             this.lblJaarAbonnement.Text = "Aquapark Jaarabonnement :";
             // 
             // LblRittenkaart
             // 
             this.LblRittenkaart.AutoSize = true;
-            this.LblRittenkaart.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblRittenkaart.BackColor = System.Drawing.Color.Transparent;
+            this.LblRittenkaart.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblRittenkaart.Location = new System.Drawing.Point(100, 248);
             this.LblRittenkaart.Name = "LblRittenkaart";
-            this.LblRittenkaart.Size = new System.Drawing.Size(85, 17);
+            this.LblRittenkaart.Size = new System.Drawing.Size(90, 16);
             this.LblRittenkaart.TabIndex = 9;
             this.LblRittenkaart.Text = "Rittenkaart :";
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::Aquapalaca.Properties.Resources.output;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(62, 37);
@@ -182,6 +188,7 @@
             // lblAquaPalace
             // 
             this.lblAquaPalace.AutoSize = true;
+            this.lblAquaPalace.BackColor = System.Drawing.Color.Transparent;
             this.lblAquaPalace.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAquaPalace.Location = new System.Drawing.Point(109, 43);
             this.lblAquaPalace.Name = "lblAquaPalace";
@@ -192,6 +199,7 @@
             // lblJaarOutput
             // 
             this.lblJaarOutput.AutoSize = true;
+            this.lblJaarOutput.BackColor = System.Drawing.Color.Transparent;
             this.lblJaarOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJaarOutput.Location = new System.Drawing.Point(100, 220);
             this.lblJaarOutput.Name = "lblJaarOutput";
@@ -202,6 +210,7 @@
             // lblRittenkaartOutput
             // 
             this.lblRittenkaartOutput.AutoSize = true;
+            this.lblRittenkaartOutput.BackColor = System.Drawing.Color.Transparent;
             this.lblRittenkaartOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRittenkaartOutput.Location = new System.Drawing.Point(100, 271);
             this.lblRittenkaartOutput.Name = "lblRittenkaartOutput";
@@ -213,6 +222,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Aquapalaca.Properties.Resources._3a1b12fa_d009_4264_8238_0820842ed812;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblRittenkaartOutput);
             this.Controls.Add(this.lblJaarOutput);

@@ -23,5 +23,15 @@ namespace Aquapalaca
             klantPagina.Show();
             this.Hide();
         }
+
+        private void klantNieuwAbonnement_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBevestigen_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

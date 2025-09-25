@@ -29,8 +29,25 @@ namespace Aquapalaca
 
             if (gebruiker != null)
             {
-                lblPersoon.Text = gebruiker.Gebruikersnaam + "!";
+                lblPersoon.Text = gebruiker.Voornaam + " " + gebruiker.Achternaam + "!";
+                if (gebruiker.AbonnementEinde != null)
+                {
+                    lblJaarOutput.Text = $"Abonnement loopt tot {gebruiker.AbonnementEinde.Value.ToShortDateString()}";
+                }
+                else
+                {
+                    lblJaarOutput.Text = "Geen actief abonnement";
+                }
             }
+            if (gebruiker.OverigeRitten.HasValue && gebruiker.OverigeRitten.Value > 0)
+            {
+                lblRittenkaartOutput.Text = "Nog " + gebruiker.OverigeRitten.ToString() + " overige ritten";
+            }
+            else
+            {
+                lblRittenkaartOutput.Text = "Geen overige ritten";
+            }
+
         }
 
         private void label1_Click(object sender, EventArgs e)

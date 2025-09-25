@@ -1,6 +1,6 @@
 ﻿namespace Aquapalaca
 {
-    partial class MedewerkerNieuwAbonnement
+    partial class medewerkerNieuwAbonnement
     {
         /// <summary>
         /// Required designer variable.
@@ -136,7 +136,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(154, 234);
+            this.label3.Location = new System.Drawing.Point(154, 314);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 16);
             this.label3.TabIndex = 20;
@@ -144,7 +144,7 @@
             // 
             // txtRitten
             // 
-            this.txtRitten.Location = new System.Drawing.Point(171, 262);
+            this.txtRitten.Location = new System.Drawing.Point(171, 342);
             this.txtRitten.Name = "txtRitten";
             this.txtRitten.Size = new System.Drawing.Size(57, 22);
             this.txtRitten.TabIndex = 21;
@@ -153,7 +153,7 @@
             // 
             this.cmbStatusAbonnement.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStatusAbonnement.FormattingEnabled = true;
-            this.cmbStatusAbonnement.Location = new System.Drawing.Point(157, 337);
+            this.cmbStatusAbonnement.Location = new System.Drawing.Point(157, 265);
             this.cmbStatusAbonnement.Name = "cmbStatusAbonnement";
             this.cmbStatusAbonnement.Size = new System.Drawing.Size(86, 24);
             this.cmbStatusAbonnement.TabIndex = 22;
@@ -161,7 +161,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(139, 308);
+            this.label4.Location = new System.Drawing.Point(139, 236);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(123, 16);
             this.label4.TabIndex = 23;

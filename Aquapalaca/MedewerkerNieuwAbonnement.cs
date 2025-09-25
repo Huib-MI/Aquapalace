@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Aquapalaca
 {
-    public partial class MedewerkerNieuwAbonnement: Form
+    public partial class medewerkerNieuwAbonnement: Form
     {
-        public MedewerkerNieuwAbonnement()
+        public medewerkerNieuwAbonnement()
         {
             InitializeComponent();
             foreach (Klanten klant in Klanten.getCustomers())
@@ -39,35 +39,53 @@ namespace Aquapalaca
 
         private void btnKoppelKlant_Click_1(object sender, EventArgs e)
         {
-            if (cmbKoppelKlant.SelectedItem == null || cmbTypeAbonnement.SelectedItem == null || cmbStatusAbonnement.SelectedItem == null)
+            if (cmbKoppelKlant.SelectedItem == null)
             {
-                MessageBox.Show("Selecteer een klant, type en status!");
+                MessageBox.Show("Selecteer een klant!");
                 return;
             }
 
-            Abonnement abonnement = new Abonnement();
-            abonnement.KlantId = ((Klanten)cmbKoppelKlant.SelectedItem).Id;
-            abonnement.TypeId = ((AbonnementType)cmbTypeAbonnement.SelectedItem).Id;
-            abonnement.StartDatum = dtpStartDatum.Value;
-            abonnement.EindDatum = dtpEindDatum.Value;
-            abonnement.OverigeRitten = Convert.ToInt32(txtRitten.Text);
-
-            // Correctly get status from the status ComboBox
-            string status = cmbStatusAbonnement.SelectedItem.ToString();
-            if (status == "Actief")
-                abonnement.Actief = 1;
-            else if (status == "Inactief")
-                abonnement.Actief = 0;
-            else
+            if (cmbTypeAbonnement.SelectedItem == null)
             {
-                MessageBox.Show("Selecteer een geldige status (Actief/Inactief)");
+                MessageBox.Show("Selecteer een abonnementstype!");
                 return;
             }
 
-            // Call insert as an instance method
+            if (cmbStatusAbonnement.SelectedItem == null)
+            {
+                MessageBox.Show("Selecteer een status (Actief/Inactief)!");
+                return;
+            }
+
+            int ritten;
+            if (!int.TryParse(txtRitten.Text, out ritten) || ritten < 0)
+            {
+                MessageBox.Show("Voer een geldig positief getal in voor het aantal ritten.");
+                return;
+            }
+
+            if (dtpStartDatum.Value.Date > dtpEindDatum.Value.Date)
+            {
+                MessageBox.Show("De startdatum mag niet na de einddatum liggen.");
+                return;
+            }
+
+            Abonnement abonnement = new Abonnement
+            {
+                KlantId = ((Klanten)cmbKoppelKlant.SelectedItem).Id,
+                TypeId = ((AbonnementType)cmbTypeAbonnement.SelectedItem).Id,
+                StartDatum = dtpStartDatum.Value.Date,
+                EindDatum = dtpEindDatum.Value.Date,
+                OverigeRitten = ritten,
+                Actief = cmbStatusAbonnement.SelectedItem.ToString() == "Actief" ? 1 : 0
+            };
+
             abonnement.Insert();
+
             MessageBox.Show("Abonnement succesvol toegevoegd!");
-            this.Hide();
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
+
     }
 }

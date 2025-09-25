@@ -25,7 +25,12 @@ namespace Aquapalaca
 
         private void KlantPagina_Load(object sender, EventArgs e)
         {
+            var gebruiker = Session.HuidigeGebruiker;
 
+            if (gebruiker != null)
+            {
+                lblPersoon.Text = gebruiker.Gebruikersnaam + "!";
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)

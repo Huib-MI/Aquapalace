@@ -117,35 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="istockphoto-1407271745-612x612" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\istockphoto-1407271745-612x612.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blank-white-background-xbsfzsltjksfompa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blank-white-background-xbsfzsltjksfompa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="d03936d8f95169c8f3ea8379e47936df" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\d03936d8f95169c8f3ea8379e47936df.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Menik Y-9 Achtergrond Doek Grijs 1-385x385" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Menik Y-9 Achtergrond Doek Grijs 1-385x385.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="output" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\output.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="003366" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\003366.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="3a1b12fa-d009-4264-8238-0820842ed812" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3a1b12fa-d009-4264-8238-0820842ed812.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="F004374a-600x600" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\F004374a-600x600.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pngtree-abstract-gradient-pattern-navy-blue-background-image_632934" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pngtree-abstract-gradient-pattern-navy-blue-background-image_632934.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="deselect" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\deselect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

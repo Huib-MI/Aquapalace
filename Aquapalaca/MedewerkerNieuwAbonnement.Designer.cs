@@ -1,6 +1,6 @@
 ﻿namespace Aquapalaca
 {
-    partial class medewerkerKlanten
+    partial class MedewerkerNieuwAbonnement
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnTerug = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnTerug
-            // 
-            this.btnTerug.Location = new System.Drawing.Point(650, 332);
-            this.btnTerug.Name = "btnTerug";
-            this.btnTerug.Size = new System.Drawing.Size(113, 80);
-            this.btnTerug.TabIndex = 0;
-            this.btnTerug.Text = "Terug";
-            this.btnTerug.UseVisualStyleBackColor = true;
-            this.btnTerug.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // medewerkerKlanten
+            // MedewerkerNieuwAbonnement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aquapalaca.Properties.Resources.output;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnTerug);
-            this.Name = "medewerkerKlanten";
-            this.Text = "medewerkerKlanten";
+            this.ClientSize = new System.Drawing.Size(407, 450);
+            this.Name = "MedewerkerNieuwAbonnement";
+            this.Text = "MedewerkerNieuwAbonnement";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnTerug;
     }
 }

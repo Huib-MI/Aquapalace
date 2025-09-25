@@ -39,6 +39,7 @@
             this.BtnUitloggen.TabIndex = 4;
             this.BtnUitloggen.Text = "Terug";
             this.BtnUitloggen.UseVisualStyleBackColor = true;
+            this.BtnUitloggen.Click += new System.EventHandler(this.BtnUitloggen_Click);
             // 
             // Rolbeheer
             // 

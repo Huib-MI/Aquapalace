@@ -103,6 +103,16 @@ namespace Aquapalaca.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap deselect {
+            get {
+                object obj = ResourceManager.GetObject("deselect", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap F004374a_600x600 {
             get {
                 object obj = ResourceManager.GetObject("F004374a-600x600", resourceCulture);

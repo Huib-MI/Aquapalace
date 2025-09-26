@@ -52,7 +52,7 @@
             // 
             this.btnAbonnementen.Location = new System.Drawing.Point(12, 125);
             this.btnAbonnementen.Name = "btnAbonnementen";
-            this.btnAbonnementen.Size = new System.Drawing.Size(142, 56);
+            this.btnAbonnementen.Size = new System.Drawing.Size(169, 58);
             this.btnAbonnementen.TabIndex = 1;
             this.btnAbonnementen.Text = "Abonnementen";
             this.btnAbonnementen.UseVisualStyleBackColor = true;
@@ -62,7 +62,7 @@
             // 
             this.btnKlanten.Location = new System.Drawing.Point(12, 229);
             this.btnKlanten.Name = "btnKlanten";
-            this.btnKlanten.Size = new System.Drawing.Size(141, 56);
+            this.btnKlanten.Size = new System.Drawing.Size(169, 56);
             this.btnKlanten.TabIndex = 2;
             this.btnKlanten.Text = "Klanten";
             this.btnKlanten.UseVisualStyleBackColor = true;
@@ -72,7 +72,7 @@
             // 
             this.btnInchecken.Location = new System.Drawing.Point(12, 341);
             this.btnInchecken.Name = "btnInchecken";
-            this.btnInchecken.Size = new System.Drawing.Size(136, 56);
+            this.btnInchecken.Size = new System.Drawing.Size(169, 56);
             this.btnInchecken.TabIndex = 3;
             this.btnInchecken.Text = "Inchecken";
             this.btnInchecken.UseVisualStyleBackColor = true;

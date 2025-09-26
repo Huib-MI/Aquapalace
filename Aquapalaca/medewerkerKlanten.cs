@@ -8,7 +8,6 @@ namespace Aquapalaca
     public partial class medewerkerKlanten : Form
     {
         private List<Klanten> klantenList;
-
         public medewerkerKlanten()
         {
             InitializeComponent();

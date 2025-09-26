@@ -116,11 +116,8 @@
     <Compile Include="beheerPagina.Designer.cs">
       <DependentUpon>beheerPagina.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Checkin.cs" />
-=======
     <Compile Include="CheckIn.cs" />
->>>>>>> 907b6c1cb769a1a137dcab9ded454d89b243fff6
     <Compile Include="Databases.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

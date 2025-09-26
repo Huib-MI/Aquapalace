@@ -115,6 +115,7 @@
             this.Controls.Add(this.btnAbonnementen);
             this.Controls.Add(this.btnUitloggen);
             this.Name = "medewerkerPagina";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "medewerkerPagina";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

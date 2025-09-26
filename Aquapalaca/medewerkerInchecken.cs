@@ -9,6 +9,7 @@ namespace Aquapalaca
     public partial class medewerkerInchecken : Form
     {
         private List<Klanten> klantenList = new List<Klanten>();
+        private Klanten laatsteIngecheckteKlant = null;
 
         public medewerkerInchecken()
         {
@@ -38,44 +39,72 @@ namespace Aquapalaca
         {
             if (cmbCheckin.SelectedItem == null)
             {
-                ToonStatus("Selecteer een klant.", false);
+                ToonStatus("⚠️ Selecteer een klant.", false);
                 return;
             }
 
             Klanten klant = (Klanten)cmbCheckin.SelectedItem;
 
+            if (laatsteIngecheckteKlant != null && laatsteIngecheckteKlant.Id == klant.Id)
+            {
+                var result = MessageBox.Show(
+                    "Er is net al een check-in voor deze gebruiker geweest. Wil je doorgaan?",
+                    "Bevestig check-in",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                );
+
+                if (result == DialogResult.No)
+                {
+                    ToonStatus("⚠️ Check-in geannuleerd.", false);
+                    return;
+                }
+            }
+
             List<Abonnement> abonnementen = Abonnement.filterAbonnementen(klant.Id, 0);
             if (abonnementen == null || abonnementen.Count == 0)
             {
-                ToonStatus("Geen abonnement gevonden voor deze klant.", false);
+                ToonStatus("❌ Geen abonnement gevonden voor deze klant.", false);
                 return;
             }
 
             Abonnement actiefAbonnement = abonnementen.FirstOrDefault(a => a.Actief == 1);
             if (actiefAbonnement == null)
             {
-                ToonStatus("Geen actief abonnement gevonden.", false);
+                ToonStatus("❌ Geen actief abonnement gevonden.", false);
                 return;
             }
 
             try
             {
-                Checkin checkin = new Checkin();
-                checkin.SubscriptieId = actiefAbonnement.Id;
-                checkin.KlantId = klant.Id;
-                checkin.CheckinTijd = DateTime.Now;
-                checkin.CheckinMethode = "receptie";
+                Checkin checkin = new Checkin
+                {
+                    SubscriptieId = actiefAbonnement.Id,
+                    KlantId = klant.Id,
+                    CheckinTijd = DateTime.Now,
+                    CheckinMethode = "receptie"
+                };
                 checkin.Insert();
 
-                AbonnementLogs log = new AbonnementLogs();
-                log.SubscriptieId = actiefAbonnement.Id;
-                log.KlantId = klant.Id;
-                log.EindDatum = actiefAbonnement.EindDatum;
-                log.LogTijd = DateTime.Now;
-                log.Status = "checked_in";
+                if (actiefAbonnement.OverigeRitten > 0)
+                {
+                    actiefAbonnement.OverigeRitten -= 1;
+                    actiefAbonnement.Update();
+                }
+
+                AbonnementLogs log = new AbonnementLogs
+                {
+                    SubscriptieId = actiefAbonnement.Id,
+                    KlantId = klant.Id,
+                    EindDatum = actiefAbonnement.EindDatum,
+                    LogTijd = DateTime.Now,
+                    Status = "checked_in"
+                };
                 log.Insert();
 
-                ToonStatus("✅ " + klant.Firstname + " " + klant.Lastname + " is succesvol ingecheckt!", true);
+                ToonStatus("✅ " + klant.Firstname + " " + klant.Lastname + " ingecheckt", true);
+
+                laatsteIngecheckteKlant = klant;
             }
             catch (Exception ex)
             {
@@ -90,4 +119,5 @@ namespace Aquapalaca
             lblCheckin.Font = new Font(lblCheckin.Font, FontStyle.Bold);
         }
     }
+
 }

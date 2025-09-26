@@ -118,6 +118,25 @@ namespace Aquapalaca
             this.KlantId = newKlantId;
         }
 
+        public void Update()
+        {
+            using (MySqlConnection con = Databases.start())
+            {
+                con.Open();
+                string sql = @"
+            UPDATE subscriptions
+            SET subscription_remaining_rides = @ResterendeRitten
+            WHERE subscription_id = @Id;";
+
+                using (MySqlCommand cmd = new MySqlCommand(sql, con))
+                {
+                    cmd.Parameters.AddWithValue("@ResterendeRitten", this.OverigeRitten);
+                    cmd.Parameters.AddWithValue("@Id", this.Id);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
 
         public void Insert()
         {

@@ -192,6 +192,7 @@
             this.Controls.Add(this.lbxAbonnement);
             this.Controls.Add(this.btnTerug);
             this.Name = "medewerkerAbonnement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "medewerkerAbonnement";
             this.ResumeLayout(false);
             this.PerformLayout();

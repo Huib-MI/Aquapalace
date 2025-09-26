@@ -65,11 +65,12 @@
             this.rdbMaand.BackColor = System.Drawing.Color.Transparent;
             this.rdbMaand.Location = new System.Drawing.Point(73, 121);
             this.rdbMaand.Name = "rdbMaand";
-            this.rdbMaand.Size = new System.Drawing.Size(359, 20);
+            this.rdbMaand.Size = new System.Drawing.Size(355, 20);
             this.rdbMaand.TabIndex = 2;
             this.rdbMaand.TabStop = true;
-            this.rdbMaand.Text = "Maandabonnement, Onberperkt toegang voor 1 maand!";
+            this.rdbMaand.Text = "Maandabonnement, Onbeperkt toegang voor 1 maand!";
             this.rdbMaand.UseVisualStyleBackColor = false;
+            this.rdbMaand.CheckedChanged += new System.EventHandler(this.rdbMaand_CheckedChanged);
             // 
             // rdbJaar
             // 
@@ -82,6 +83,7 @@
             this.rdbJaar.TabStop = true;
             this.rdbJaar.Text = "Jaarabonnement, Onbeperkt toegang voor 1 jaar!";
             this.rdbJaar.UseVisualStyleBackColor = false;
+            this.rdbJaar.CheckedChanged += new System.EventHandler(this.rdbJaar_CheckedChanged);
             // 
             // lblPrijs
             // 
@@ -104,13 +106,14 @@
             this.rdbRittenkaart.TabStop = true;
             this.rdbRittenkaart.Text = "10-Rittenkaart, Toegang voor 10 bezoeken!";
             this.rdbRittenkaart.UseVisualStyleBackColor = false;
+            this.rdbRittenkaart.CheckedChanged += new System.EventHandler(this.rdbRittenkaart_CheckedChanged);
             // 
             // btnBevestigen
             // 
             this.btnBevestigen.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnBevestigen.Location = new System.Drawing.Point(159, 253);
+            this.btnBevestigen.Location = new System.Drawing.Point(135, 253);
             this.btnBevestigen.Name = "btnBevestigen";
-            this.btnBevestigen.Size = new System.Drawing.Size(97, 55);
+            this.btnBevestigen.Size = new System.Drawing.Size(130, 55);
             this.btnBevestigen.TabIndex = 6;
             this.btnBevestigen.Text = "Abonnement bevestigen";
             this.btnBevestigen.UseVisualStyleBackColor = false;
@@ -122,7 +125,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aquapalaca.Properties.Resources._3a1b12fa_d009_4264_8238_0820842ed812;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(457, 372);
+            this.ClientSize = new System.Drawing.Size(457, 334);
             this.Controls.Add(this.btnBevestigen);
             this.Controls.Add(this.rdbRittenkaart);
             this.Controls.Add(this.lblPrijs);

@@ -56,6 +56,7 @@
             this.txtWachtwoord.PasswordChar = '*';
             this.txtWachtwoord.Size = new System.Drawing.Size(111, 22);
             this.txtWachtwoord.TabIndex = 1;
+            this.txtWachtwoord.UseSystemPasswordChar = true;
             // 
             // btnInloggen
             // 

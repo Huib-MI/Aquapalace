@@ -31,7 +31,9 @@ namespace Aquapalaca
 
         private void BtnGebruikersoverzicht_Click(object sender, EventArgs e)
         {
-
+            GebruikersOverzicht gebruikersOverzicht = new GebruikersOverzicht();
+            gebruikersOverzicht.Show();
+            this.Hide();
         }
 
         private void BtnAbonnementsoverzicht_Click(object sender, EventArgs e)

@@ -68,6 +68,10 @@ namespace Aquapalaca
 
             // Hier komt jouw database insert/update code
             MessageBox.Show(abonnementType + " toegevoegd voor gebruiker " + gebruiker.Voornaam + " " + gebruiker.Achternaam);
+
+            KlantPagina klantPagina = new KlantPagina();
+            klantPagina.Show();
+            this.Close();
         }
 
         private void rdbMaand_CheckedChanged(object sender, EventArgs e)

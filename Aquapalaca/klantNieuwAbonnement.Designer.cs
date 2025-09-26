@@ -111,9 +111,9 @@
             // btnBevestigen
             // 
             this.btnBevestigen.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnBevestigen.Location = new System.Drawing.Point(159, 253);
+            this.btnBevestigen.Location = new System.Drawing.Point(135, 253);
             this.btnBevestigen.Name = "btnBevestigen";
-            this.btnBevestigen.Size = new System.Drawing.Size(97, 55);
+            this.btnBevestigen.Size = new System.Drawing.Size(130, 55);
             this.btnBevestigen.TabIndex = 6;
             this.btnBevestigen.Text = "Abonnement bevestigen";
             this.btnBevestigen.UseVisualStyleBackColor = false;

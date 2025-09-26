@@ -29,23 +29,38 @@
         private void InitializeComponent()
         {
             this.btnTerug = new System.Windows.Forms.Button();
+            this.lbxKlantGeschiedenis = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnTerug
             // 
-            this.btnTerug.Location = new System.Drawing.Point(620, 346);
+            this.btnTerug.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnTerug.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTerug.ForeColor = System.Drawing.Color.White;
+            this.btnTerug.Location = new System.Drawing.Point(12, 12);
             this.btnTerug.Name = "btnTerug";
-            this.btnTerug.Size = new System.Drawing.Size(132, 71);
+            this.btnTerug.Size = new System.Drawing.Size(68, 38);
             this.btnTerug.TabIndex = 0;
             this.btnTerug.Text = "Terug";
-            this.btnTerug.UseVisualStyleBackColor = true;
+            this.btnTerug.UseVisualStyleBackColor = false;
             this.btnTerug.Click += new System.EventHandler(this.btnUitloggen_Click);
+            // 
+            // lbxKlantGeschiedenis
+            // 
+            this.lbxKlantGeschiedenis.FormattingEnabled = true;
+            this.lbxKlantGeschiedenis.ItemHeight = 16;
+            this.lbxKlantGeschiedenis.Location = new System.Drawing.Point(95, 12);
+            this.lbxKlantGeschiedenis.Name = "lbxKlantGeschiedenis";
+            this.lbxKlantGeschiedenis.Size = new System.Drawing.Size(295, 196);
+            this.lbxKlantGeschiedenis.TabIndex = 1;
             // 
             // klantGeschiedenis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::Aquapalaca.Properties.Resources._3a1b12fa_d009_4264_8238_0820842ed812;
+            this.ClientSize = new System.Drawing.Size(407, 223);
+            this.Controls.Add(this.lbxKlantGeschiedenis);
             this.Controls.Add(this.btnTerug);
             this.Name = "klantGeschiedenis";
             this.Text = "klantGeschiedenis";
@@ -56,5 +71,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnTerug;
+        private System.Windows.Forms.ListBox lbxKlantGeschiedenis;
     }
 }

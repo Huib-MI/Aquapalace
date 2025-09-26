@@ -100,6 +100,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnTerug);
             this.Name = "medewerkerInchecken";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "medewerkerInchecken";
             this.ResumeLayout(false);
             this.PerformLayout();

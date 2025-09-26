@@ -23,5 +23,10 @@ namespace Aquapalaca
             klantPagina.Show();
             this.Hide();
         }
+
+        private void lblNaam_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

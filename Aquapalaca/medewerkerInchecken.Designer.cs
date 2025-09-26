@@ -37,9 +37,9 @@
             // 
             // btnTerug
             // 
-            this.btnTerug.Location = new System.Drawing.Point(334, 123);
+            this.btnTerug.Location = new System.Drawing.Point(308, 144);
             this.btnTerug.Name = "btnTerug";
-            this.btnTerug.Size = new System.Drawing.Size(89, 51);
+            this.btnTerug.Size = new System.Drawing.Size(75, 51);
             this.btnTerug.TabIndex = 0;
             this.btnTerug.Text = "Terug";
             this.btnTerug.UseVisualStyleBackColor = true;
@@ -69,7 +69,7 @@
             // btnCheckin
             // 
             this.btnCheckin.BackColor = System.Drawing.Color.Chartreuse;
-            this.btnCheckin.Location = new System.Drawing.Point(120, 105);
+            this.btnCheckin.Location = new System.Drawing.Point(286, 43);
             this.btnCheckin.Name = "btnCheckin";
             this.btnCheckin.Size = new System.Drawing.Size(97, 30);
             this.btnCheckin.TabIndex = 13;
@@ -80,11 +80,12 @@
             // lblCheckin
             // 
             this.lblCheckin.AutoSize = true;
-            this.lblCheckin.Location = new System.Drawing.Point(123, 158);
+            this.lblCheckin.BackColor = System.Drawing.Color.Transparent;
+            this.lblCheckin.Location = new System.Drawing.Point(69, 106);
             this.lblCheckin.Name = "lblCheckin";
-            this.lblCheckin.Size = new System.Drawing.Size(91, 16);
+            this.lblCheckin.Size = new System.Drawing.Size(153, 16);
             this.lblCheckin.TabIndex = 14;
-            this.lblCheckin.Text = "Incheck status";
+            this.lblCheckin.Text = "✅ Welkom Medewerker!";
             // 
             // medewerkerInchecken
             // 
@@ -92,7 +93,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aquapalaca.Properties.Resources.output;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(435, 186);
+            this.ClientSize = new System.Drawing.Size(395, 207);
             this.Controls.Add(this.lblCheckin);
             this.Controls.Add(this.btnCheckin);
             this.Controls.Add(this.cmbCheckin);

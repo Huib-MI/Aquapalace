@@ -167,7 +167,7 @@
             this.label4.TabIndex = 23;
             this.label4.Text = "Status Abonnement";
             // 
-            // MedewerkerNieuwAbonnement
+            // medewerkerNieuwAbonnement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -188,7 +188,8 @@
             this.Controls.Add(this.lblType);
             this.Controls.Add(this.cmbKoppelKlant);
             this.Controls.Add(this.lblKoppelKlant);
-            this.Name = "MedewerkerNieuwAbonnement";
+            this.Name = "medewerkerNieuwAbonnement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MedewerkerNieuwAbonnement";
             this.ResumeLayout(false);
             this.PerformLayout();

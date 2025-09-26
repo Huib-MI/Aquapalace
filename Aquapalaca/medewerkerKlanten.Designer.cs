@@ -222,7 +222,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aquapalaca.Properties.Resources.output;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(985, 617);
+            this.ClientSize = new System.Drawing.Size(985, 619);
             this.Controls.Add(this.btnDeselect);
             this.Controls.Add(this.txtAdress);
             this.Controls.Add(this.label7);
@@ -243,6 +243,7 @@
             this.Controls.Add(this.lbxKlanten);
             this.Controls.Add(this.btnTerug);
             this.Name = "medewerkerKlanten";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "medewerkerKlanten";
             this.ResumeLayout(false);
             this.PerformLayout();

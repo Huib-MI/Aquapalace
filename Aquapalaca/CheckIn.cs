@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Aquapalaca
 {
-    class CheckIn
+    class Checkin
     {
         public int Id;
         public string SubscriptionId;
@@ -17,9 +17,9 @@ namespace Aquapalaca
         public DateTime Time;
         public string Method;
 
-        public static List<CheckIn> getCheckIn()
+        public static List<Checkin> getCheckIn()
         {
-            List<CheckIn> checkinlist = new List<CheckIn>();
+            List<Checkin> checkinlist = new List<Checkin>();
 
             MySqlConnection con = Databases.start();
             con.Open();
@@ -32,7 +32,7 @@ namespace Aquapalaca
 
             while (reader.Read())
             {
-                CheckIn checkinobject = new CheckIn();
+                Checkin checkinobject = new Checkin();
                 checkinobject.Id = Convert.ToInt32((reader["checkin_id"]));
                 checkinobject.SubscriptionId = Convert.ToString(reader["checkin_subscription_id"]);
                 checkinobject.CustomerId = Convert.ToString(reader["checkin_customer_id"]);
@@ -71,9 +71,8 @@ namespace Aquapalaca
             con.Close();
         }
 
-        
+
     }
 }
 
 
-    

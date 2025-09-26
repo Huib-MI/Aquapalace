@@ -39,7 +39,9 @@
             // 
             // btnTerug
             // 
-            this.btnTerug.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnTerug.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnTerug.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTerug.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnTerug.Location = new System.Drawing.Point(12, 12);
             this.btnTerug.Name = "btnTerug";
             this.btnTerug.Size = new System.Drawing.Size(86, 39);
@@ -110,7 +112,9 @@
             // 
             // btnBevestigen
             // 
-            this.btnBevestigen.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnBevestigen.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnBevestigen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBevestigen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBevestigen.Location = new System.Drawing.Point(135, 253);
             this.btnBevestigen.Name = "btnBevestigen";
             this.btnBevestigen.Size = new System.Drawing.Size(130, 55);

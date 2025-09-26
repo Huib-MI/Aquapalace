@@ -37,9 +37,10 @@
             // 
             // btnTerug
             // 
-            this.btnTerug.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnTerug.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnTerug.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTerug.Location = new System.Drawing.Point(220, 106);
+            this.btnTerug.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnTerug.Location = new System.Drawing.Point(16, 103);
             this.btnTerug.Name = "btnTerug";
             this.btnTerug.Size = new System.Drawing.Size(87, 46);
             this.btnTerug.TabIndex = 0;
@@ -60,10 +61,11 @@
             // 
             // btnInchecken
             // 
-            this.btnInchecken.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnInchecken.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnInchecken.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnInchecken.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInchecken.Location = new System.Drawing.Point(12, 106);
+            this.btnInchecken.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnInchecken.Location = new System.Drawing.Point(219, 103);
             this.btnInchecken.Name = "btnInchecken";
             this.btnInchecken.Size = new System.Drawing.Size(88, 46);
             this.btnInchecken.TabIndex = 5;

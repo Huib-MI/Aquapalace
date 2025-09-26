@@ -36,7 +36,7 @@
             // 
             this.btnTerug.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnTerug.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTerug.ForeColor = System.Drawing.Color.White;
+            this.btnTerug.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnTerug.Location = new System.Drawing.Point(12, 12);
             this.btnTerug.Name = "btnTerug";
             this.btnTerug.Size = new System.Drawing.Size(68, 38);

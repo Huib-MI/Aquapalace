@@ -64,14 +64,14 @@ namespace Aquapalaca
             List<Abonnement> abonnementen = Abonnement.filterAbonnementen(klant.Id, 0);
             if (abonnementen == null || abonnementen.Count == 0)
             {
-                ToonStatus("Geen abonnement gevonden voor deze klant.", false);
+                ToonStatus("❌ Geen abonnement gevonden voor deze klant.", false);
                 return;
             }
 
             Abonnement actiefAbonnement = abonnementen.FirstOrDefault(a => a.Actief == 1);
             if (actiefAbonnement == null)
             {
-                ToonStatus("Geen actief abonnement gevonden.", false);
+                ToonStatus("❌ Geen actief abonnement gevonden.", false);
                 return;
             }
 
@@ -85,6 +85,12 @@ namespace Aquapalaca
                     CheckinMethode = "receptie"
                 };
                 checkin.Insert();
+
+                if (actiefAbonnement.OverigeRitten > 0)
+                {
+                    actiefAbonnement.OverigeRitten -= 1;
+                    actiefAbonnement.Update();
+                }
 
                 AbonnementLogs log = new AbonnementLogs
                 {

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GebruikersOverzicht));
             this.btnTerug = new System.Windows.Forms.Button();
             this.lbxOverzicht = new System.Windows.Forms.ListBox();
             this.lblOverzicht = new System.Windows.Forms.Label();
@@ -36,6 +37,9 @@
             this.txtWijzigen = new System.Windows.Forms.TextBox();
             this.btnWijzigen = new System.Windows.Forms.Button();
             this.cbxRol = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTerug
@@ -54,7 +58,7 @@
             this.lbxOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbxOverzicht.FormattingEnabled = true;
             this.lbxOverzicht.ItemHeight = 16;
-            this.lbxOverzicht.Location = new System.Drawing.Point(56, 100);
+            this.lbxOverzicht.Location = new System.Drawing.Point(56, 124);
             this.lbxOverzicht.Name = "lbxOverzicht";
             this.lbxOverzicht.Size = new System.Drawing.Size(471, 196);
             this.lbxOverzicht.TabIndex = 1;
@@ -64,10 +68,10 @@
             // 
             this.lblOverzicht.AutoSize = true;
             this.lblOverzicht.BackColor = System.Drawing.Color.Transparent;
-            this.lblOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOverzicht.Location = new System.Drawing.Point(51, 59);
+            this.lblOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOverzicht.Location = new System.Drawing.Point(52, 87);
             this.lblOverzicht.Name = "lblOverzicht";
-            this.lblOverzicht.Size = new System.Drawing.Size(204, 25);
+            this.lblOverzicht.Size = new System.Drawing.Size(188, 22);
             this.lblOverzicht.TabIndex = 2;
             this.lblOverzicht.Text = "Gebruikersoverzicht";
             // 
@@ -122,12 +126,37 @@
             this.cbxRol.TabIndex = 8;
             this.cbxRol.SelectedIndexChanged += new System.EventHandler(this.cbxRol_SelectedIndexChanged);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::Aquapalaca.Properties.Resources.output;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(41, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(61, 66);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(136, 9);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(1);
+            this.label1.Size = new System.Drawing.Size(391, 53);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "AquaPalace LVS";
+            // 
             // GebruikersOverzicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aquapalaca.Properties.Resources.output;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.cbxRol);
             this.Controls.Add(this.btnWijzigen);
             this.Controls.Add(this.txtWijzigen);
@@ -139,6 +168,7 @@
             this.Name = "GebruikersOverzicht";
             this.Text = "GebruikersOverzicht";
             this.Load += new System.EventHandler(this.GebruikersOverzicht_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,5 +184,7 @@
         private System.Windows.Forms.TextBox txtWijzigen;
         private System.Windows.Forms.Button btnWijzigen;
         private System.Windows.Forms.ComboBox cbxRol;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -57,6 +57,8 @@ namespace Aquapalaca
             else
             {
                 MessageBox.Show("Ongeldige login");
+                txtGebruikersnaam.Clear();
+                txtWachtwoord.Clear();
             }
 
            

@@ -53,6 +53,7 @@
             // 
             this.txtWachtwoord.Location = new System.Drawing.Point(381, 247);
             this.txtWachtwoord.Name = "txtWachtwoord";
+            this.txtWachtwoord.PasswordChar = '*';
             this.txtWachtwoord.Size = new System.Drawing.Size(111, 22);
             this.txtWachtwoord.TabIndex = 1;
             // 

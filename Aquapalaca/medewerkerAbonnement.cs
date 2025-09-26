@@ -57,6 +57,67 @@ namespace Aquapalaca
 
         }
 
+        private void LoadAbonnementen()
+        {
+            lbxAbonnement.Items.Clear();
+
+            foreach (Abonnement abonnement in Abonnement.getAbonnementen())
+            {
+                lbxAbonnement.Items.Add(abonnement);
+            }
+
+            txtStatus.Text = "";
+            txtStatus.Hide();
+            lblStatus.Hide();
+            cmbKoppelKlant.SelectedIndex = -1;
+            cmbKoppelKlant.Hide();
+            lblKoppelKlant.Hide();
+            btnKoppelKlant.Hide();
+            btnKoppelKlant.Enabled = false;
+
+            if (cmbFilterKlant.Items.Count > 0)
+                cmbFilterKlant.SelectedIndex = 0;
+
+            if (cmbFilterType.Items.Count > 0)
+                cmbFilterType.SelectedIndex = 0;
+        }
+
+        private void FilterAbonnementen()
+        {
+            int selectedId = -1;
+            if (lbxAbonnement.SelectedItem is Abonnement selectedAbonnement)
+                selectedId = selectedAbonnement.Id;
+
+            lbxAbonnement.Items.Clear();
+            int klantId = 0;
+            int typeId = 0;
+
+            if (cmbFilterKlant.SelectedItem is Klanten geselecteerdeKlant)
+                klantId = geselecteerdeKlant.Id;
+
+            if (cmbFilterType.SelectedItem is AbonnementType geselecteerdType)
+                typeId = geselecteerdType.Id;
+
+            List<Abonnement> filtered = Abonnement.filterAbonnementen(klantId, typeId);
+
+            foreach (Abonnement abonnement in filtered)
+            {
+                lbxAbonnement.Items.Add(abonnement);
+            }
+
+            if (selectedId != -1)
+            {
+                foreach (Abonnement abonnement in lbxAbonnement.Items)
+                {
+                    if (abonnement.Id == selectedId)
+                    {
+                        lbxAbonnement.SelectedItem = abonnement;
+                        break;
+                    }
+                }
+            }
+        }
+
 
         private void btnTerug_Click(object sender, EventArgs e)
         {
@@ -103,47 +164,13 @@ namespace Aquapalaca
 
         private void btnAddAbbonement_Click(object sender, EventArgs e)
         {
-            MedewerkerNieuwAbonnement medewerkerNieuwAbonnement = new MedewerkerNieuwAbonnement();
-            medewerkerNieuwAbonnement.ShowDialog();
-        }
-
-        private void FilterAbonnementen()
-        {
-            int selectedId = -1;
-            if (lbxAbonnement.SelectedItem is Abonnement selectedAbonnement)
-                selectedId = selectedAbonnement.Id;
-
-            lbxAbonnement.Items.Clear();
-            int klantId = 0;
-            int typeId = 0;
-
-            if (cmbFilterKlant.SelectedItem is Klanten geselecteerdeKlant)
-                klantId = geselecteerdeKlant.Id;
-
-            if (cmbFilterType.SelectedItem is AbonnementType geselecteerdType)
-                typeId = geselecteerdType.Id;
-
-            List<Abonnement> filtered = Abonnement.filterAbonnementen(klantId, typeId);
-
-            foreach (Abonnement abonnement in filtered)
+            btnDeselect_Click(sender, e);
+            using (medewerkerNieuwAbonnement medewerkerNieuwAbonnement = new medewerkerNieuwAbonnement())
             {
-                lbxAbonnement.Items.Add(abonnement);
-            }
-
-            if (selectedId != -1)
-            {
-                foreach (Abonnement abonnement in lbxAbonnement.Items)
-                {
-                    if (abonnement.Id == selectedId)
-                    {
-                        lbxAbonnement.SelectedItem = abonnement;
-                        break;
-                    }
-                }
+                var result = medewerkerNieuwAbonnement.ShowDialog();
+                LoadAbonnementen();
             }
         }
-
-
 
         private void cmbKlanten_SelectedIndexChanged(object sender, EventArgs e)
         {

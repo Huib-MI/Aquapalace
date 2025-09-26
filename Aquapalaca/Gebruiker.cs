@@ -11,10 +11,15 @@ namespace Aquapalaca
     public class Gebruiker
     {
         public int Id;
+        public string Voornaam;
+        public string Achternaam;
         public string Gebruikersnaam;
         public string Hashwachtwoord;
         public string Rol;
         public DateTime CreatedAt;
+        public DateTime? AbonnementEinde { get; set; }
+        public int? OverigeRitten { get; set; }
+         
         public override string ToString()
         {
             return $"Id = {this.Id}    Gebruikersnaam = {this.Gebruikersnaam}    Rol = {this.Rol}";
@@ -27,7 +32,7 @@ namespace Aquapalaca
             con.Open();
             MySqlCommand myCommand =  new MySqlCommand();
             myCommand.Connection = con;
-            myCommand.CommandText = @"SELECT * FROM users WHERE user_username = @gebruikersnaam;";
+            myCommand.CommandText = @"SELECT * FROM users LEFT JOIN customers ON user_id = customer_user_id LEFT JOIN subscriptions ON customer_id = subscription_customer_id WHERE user_username = @gebruikersnaam";
             myCommand.Parameters.AddWithValue("@gebruikersnaam", gebruikersnaam);
             MySqlDataReader reader = myCommand.ExecuteReader();
             while (reader.Read())
@@ -41,10 +46,29 @@ namespace Aquapalaca
                     {
                         gebruikersobject = new Gebruiker();
                         gebruikersobject.Id = Convert.ToInt32(reader["user_id"]);
+                        gebruikersobject.Voornaam = Convert.ToString(reader["customer_firstname"]);
+                        gebruikersobject.Achternaam = Convert.ToString(reader["customer_lastname"]);
                         gebruikersobject.Gebruikersnaam = Convert.ToString(reader["user_username"]);
                         gebruikersobject.Hashwachtwoord = bestaandWachtwoord;
                         gebruikersobject.Rol = Convert.ToString(reader["user_role"]);
                         gebruikersobject.CreatedAt = Convert.ToDateTime(reader["user_created_at"]);
+                        if (reader["subscription_end_date"] != DBNull.Value)
+                        {
+                            gebruikersobject.AbonnementEinde = Convert.ToDateTime(reader["subscription_end_date"]);
+                        }
+                        else
+                        {
+                            gebruikersobject.AbonnementEinde = null;
+                        }
+
+                        if (reader["subscription_remaining_rides"] != DBNull.Value)
+                        {
+                            gebruikersobject.OverigeRitten = Convert.ToInt32(reader["subscription_remaining_rides"]);
+                        }
+                        else
+                        {
+                            gebruikersobject.OverigeRitten = 0;
+                        }
                     }
                 }
             }

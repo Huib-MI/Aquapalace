@@ -53,6 +53,7 @@
             this.lbxKlantGeschiedenis.Name = "lbxKlantGeschiedenis";
             this.lbxKlantGeschiedenis.Size = new System.Drawing.Size(295, 196);
             this.lbxKlantGeschiedenis.TabIndex = 1;
+            this.lbxKlantGeschiedenis.SelectedIndexChanged += new System.EventHandler(this.lbxKlantGeschiedenis_SelectedIndexChanged);
             // 
             // klantGeschiedenis
             // 
@@ -64,6 +65,7 @@
             this.Controls.Add(this.btnTerug);
             this.Name = "klantGeschiedenis";
             this.Text = "klantGeschiedenis";
+            this.Load += new System.EventHandler(this.klantGeschiedenis_Load);
             this.ResumeLayout(false);
 
         }

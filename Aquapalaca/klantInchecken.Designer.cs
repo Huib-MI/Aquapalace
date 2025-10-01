@@ -71,6 +71,7 @@
             this.btnInchecken.TabIndex = 5;
             this.btnInchecken.Text = "Inchecken";
             this.btnInchecken.UseVisualStyleBackColor = false;
+            this.btnInchecken.Click += new System.EventHandler(this.btnInchecken_Click);
             // 
             // lblWelkom
             // 
@@ -107,6 +108,7 @@
             this.Controls.Add(this.btnTerug);
             this.Name = "klantInchecken";
             this.Text = "klantInchecken";
+            this.Load += new System.EventHandler(this.klantInchecken_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

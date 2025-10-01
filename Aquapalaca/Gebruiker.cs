@@ -19,7 +19,10 @@ namespace Aquapalaca
         public DateTime CreatedAt;
         public DateTime? AbonnementEinde { get; set; }
         public int? OverigeRitten { get; set; }
-         
+        public int? CustomerId { get; set; }
+        public int? SubscriptionId { get; set; }
+
+
         public override string ToString()
         {
             return $"Id = {this.Id}    Gebruikersnaam = {this.Gebruikersnaam}    Rol = {this.Rol}";
@@ -69,6 +72,16 @@ namespace Aquapalaca
                         {
                             gebruikersobject.OverigeRitten = 0;
                         }
+                        if (reader["customer_id"] != DBNull.Value)
+                        {
+                            gebruikersobject.CustomerId = Convert.ToInt32(reader["customer_id"]);
+                        }
+
+                        if (reader["subscription_id"] != DBNull.Value)
+                        {
+                            gebruikersobject.SubscriptionId = Convert.ToInt32(reader["subscription_id"]);
+                        }
+
                     }
                 }
             }

@@ -65,6 +65,7 @@
             this.cmbCheckin.Name = "cmbCheckin";
             this.cmbCheckin.Size = new System.Drawing.Size(152, 24);
             this.cmbCheckin.TabIndex = 12;
+            this.cmbCheckin.SelectedIndexChanged += new System.EventHandler(this.cmbCheckin_SelectedIndexChanged);
             // 
             // btnCheckin
             // 
@@ -102,6 +103,7 @@
             this.Name = "medewerkerInchecken";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "medewerkerInchecken";
+            this.Load += new System.EventHandler(this.medewerkerInchecken_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

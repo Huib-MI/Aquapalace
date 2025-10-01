@@ -118,6 +118,16 @@ namespace Aquapalaca
             lblCheckin.ForeColor = succes ? Color.Green : Color.Red;
             lblCheckin.Font = new Font(lblCheckin.Font, FontStyle.Bold);
         }
+
+        private void cmbCheckin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void medewerkerInchecken_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

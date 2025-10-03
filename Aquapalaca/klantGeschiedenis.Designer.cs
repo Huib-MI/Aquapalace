@@ -48,10 +48,11 @@
             // lbxKlantGeschiedenis
             // 
             this.lbxKlantGeschiedenis.FormattingEnabled = true;
+            this.lbxKlantGeschiedenis.HorizontalScrollbar = true;
             this.lbxKlantGeschiedenis.ItemHeight = 16;
             this.lbxKlantGeschiedenis.Location = new System.Drawing.Point(95, 12);
             this.lbxKlantGeschiedenis.Name = "lbxKlantGeschiedenis";
-            this.lbxKlantGeschiedenis.Size = new System.Drawing.Size(295, 196);
+            this.lbxKlantGeschiedenis.Size = new System.Drawing.Size(506, 196);
             this.lbxKlantGeschiedenis.TabIndex = 1;
             this.lbxKlantGeschiedenis.SelectedIndexChanged += new System.EventHandler(this.lbxKlantGeschiedenis_SelectedIndexChanged);
             // 
@@ -60,7 +61,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aquapalaca.Properties.Resources._3a1b12fa_d009_4264_8238_0820842ed812;
-            this.ClientSize = new System.Drawing.Size(407, 223);
+            this.ClientSize = new System.Drawing.Size(619, 217);
             this.Controls.Add(this.lbxKlantGeschiedenis);
             this.Controls.Add(this.btnTerug);
             this.Name = "klantGeschiedenis";

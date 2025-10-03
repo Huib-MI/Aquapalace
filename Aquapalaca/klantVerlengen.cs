@@ -41,15 +41,8 @@ namespace Aquapalaca
 
             Abonnement geselecteerd = (Abonnement)cmbAbonnement.SelectedItem;
 
-            if (geselecteerd.TypeId == 1) // voorbeeld: 1 = rittenkaart
+            if (geselecteerd.TypeId == 1 || geselecteerd.TypeId == 2) // maand- of jaarabonnement
             {
-                geselecteerd.OverigeRitten += 10; // verlengen met 10 ritten
-                geselecteerd.Update();
-                MessageBox.Show("Rittenkaart verlengd met 10 ritten!");
-            }
-            else if (geselecteerd.TypeId == 2) // voorbeeld: 2 = tijd-abonnement
-            {
-                // hier gebruik ik een simpele keuze via een extra form of MessageBox
                 DialogResult keuze = MessageBox.Show("Wil je verlengen met 1 maand (Ja), 6 maanden (Nee) of 1 jaar (Annuleren)?",
                                                      "Abonnement verlengen",
                                                      MessageBoxButtons.YesNoCancel);
@@ -70,6 +63,13 @@ namespace Aquapalaca
                 geselecteerd.Update();
                 MessageBox.Show("Abonnement verlengd!");
             }
+            else if (geselecteerd.TypeId == 3) // rittenkaart
+            {
+                geselecteerd.OverigeRitten += 10; // verlengen met 10 ritten
+                geselecteerd.Update();
+                MessageBox.Show("Rittenkaart verlengd met 10 ritten!");
+            }
+
 
             // lijst opnieuw laden zodat wijzigingen zichtbaar worden
             LaadAbonnementen(Session.HuidigeGebruiker.Id);
@@ -85,7 +85,7 @@ namespace Aquapalaca
                 return;
             }
 
-            LaadAbonnementen(gebruiker.Id);
+            LaadAbonnementen(gebruiker.CustomerId);
         }
 
         private void LaadAbonnementen(int klantId)

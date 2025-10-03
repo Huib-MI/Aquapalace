@@ -56,7 +56,7 @@ namespace Aquapalaca
             Abonnement nieuwAbonnement = new Abonnement
             {
                 TypeId = abonnementTypeId,
-                KlantId = gebruiker.Id,
+                KlantId = gebruiker.CustomerId,
                 StartDatum = DateTime.Now,
                 EindDatum = geselecteerdAbonnementType == 1 ? DateTime.Now.AddMonths(1) :
                              geselecteerdAbonnementType == 2 ? DateTime.Now.AddYears(1) : DateTime.Now,

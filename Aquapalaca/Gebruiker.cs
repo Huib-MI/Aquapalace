@@ -19,7 +19,7 @@ namespace Aquapalaca
         public DateTime CreatedAt;
         public DateTime? AbonnementEinde { get; set; }
         public int? OverigeRitten { get; set; }
-        public int? CustomerId { get; set; }
+        public int CustomerId { get; set; }
         public int? SubscriptionId { get; set; }
 
 
@@ -158,6 +158,8 @@ namespace Aquapalaca
             con.Close();
             return geblist;
         }
+
+
 
 
 

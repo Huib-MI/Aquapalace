@@ -39,7 +39,7 @@ namespace Aquapalaca
                 return;
             }
 
-            var logs = AbonnementLogs.GetLogsByCustomerId(gebruiker.CustomerId.Value);
+            var logs = AbonnementLogs.GetLogsByCustomerId(gebruiker.CustomerId);
 
 
             if (logs.Count == 0)

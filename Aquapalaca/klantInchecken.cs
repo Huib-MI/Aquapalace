@@ -57,8 +57,8 @@ namespace Aquapalaca
 
             Checkin checkin = new Checkin
             {
-                SubscriptieId = gebruiker.SubscriptionId.Value,  // veilig want we checkten net op null
-                KlantId = gebruiker.CustomerId,            // ook nullable dus beter met .Value
+                SubscriptieId = gebruiker.SubscriptionId.Value,  
+                KlantId = gebruiker.CustomerId,           
                 CheckinTijd = DateTime.Now,
                 CheckinMethode = "button"
             };

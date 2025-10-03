@@ -66,7 +66,6 @@ namespace Aquapalaca
 
             nieuwAbonnement.Insert();
 
-            // Hier komt jouw database insert/update code
             MessageBox.Show(abonnementType + " toegevoegd voor gebruiker " + gebruiker.Voornaam + " " + gebruiker.Achternaam);
 
             KlantPagina klantPagina = new KlantPagina();

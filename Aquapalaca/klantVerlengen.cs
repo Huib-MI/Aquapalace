@@ -41,7 +41,7 @@ namespace Aquapalaca
 
             Abonnement geselecteerd = (Abonnement)cmbAbonnement.SelectedItem;
 
-            if (geselecteerd.TypeId == 1 || geselecteerd.TypeId == 2) // maand- of jaarabonnement
+            if (geselecteerd.TypeId == 1 || geselecteerd.TypeId == 2) 
             {
                 DialogResult keuze = MessageBox.Show("Wil je verlengen met 1 maand (Ja), 6 maanden (Nee) of 1 jaar (Annuleren)?",
                                                      "Abonnement verlengen",
@@ -63,15 +63,14 @@ namespace Aquapalaca
                 geselecteerd.Update();
                 MessageBox.Show("Abonnement verlengd!");
             }
-            else if (geselecteerd.TypeId == 3) // rittenkaart
+            else if (geselecteerd.TypeId == 3) 
             {
-                geselecteerd.OverigeRitten += 10; // verlengen met 10 ritten
+                geselecteerd.OverigeRitten += 10; 
                 geselecteerd.Update();
                 MessageBox.Show("Rittenkaart verlengd met 10 ritten!");
             }
 
 
-            // lijst opnieuw laden zodat wijzigingen zichtbaar worden
             LaadAbonnementen(Session.HuidigeGebruiker.Id);
         }
 

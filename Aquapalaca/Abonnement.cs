@@ -125,12 +125,14 @@ namespace Aquapalaca
                 con.Open();
                 string sql = @"
             UPDATE subscriptions
-            SET subscription_remaining_rides = @ResterendeRitten
+            SET subscription_remaining_rides = @ResterendeRitten,
+                subscription_end_date = @EindDatum
             WHERE subscription_id = @Id;";
 
                 using (MySqlCommand cmd = new MySqlCommand(sql, con))
                 {
                     cmd.Parameters.AddWithValue("@ResterendeRitten", this.OverigeRitten);
+                    cmd.Parameters.AddWithValue("@EindDatum", this.EindDatum);
                     cmd.Parameters.AddWithValue("@Id", this.Id);
                     cmd.ExecuteNonQuery();
                 }

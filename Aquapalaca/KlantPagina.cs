@@ -94,5 +94,12 @@ namespace Aquapalaca
             KlantNieuwAbonnement.Show();
             this.Hide();
         }
+
+        private void BtnVerlengen_Click_1(object sender, EventArgs e)
+        {
+            klantVerlengen klantVerlengen = new klantVerlengen();
+            klantVerlengen.Show();
+            this.Hide();
+        }
     }
 }

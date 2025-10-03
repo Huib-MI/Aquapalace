@@ -121,6 +121,7 @@
             this.BtnVerlengen.TabIndex = 5;
             this.BtnVerlengen.Text = "Abonnement verlengen";
             this.BtnVerlengen.UseVisualStyleBackColor = false;
+            this.BtnVerlengen.Click += new System.EventHandler(this.BtnVerlengen_Click_1);
             // 
             // BtnInchecken
             // 

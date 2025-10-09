@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Abonnementsoverzicht));
             this.BtnAbonnementen = new System.Windows.Forms.Button();
-            this.BtnKlanten = new System.Windows.Forms.Button();
             this.BtnInchecken = new System.Windows.Forms.Button();
             this.BtnUitloggen = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -38,6 +37,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dgvSubscriptions = new System.Windows.Forms.DataGridView();
             this.lbxAbonnement = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubscriptions)).BeginInit();
             this.SuspendLayout();
@@ -50,16 +50,6 @@
             this.BtnAbonnementen.TabIndex = 0;
             this.BtnAbonnementen.Text = "Abonnementen";
             this.BtnAbonnementen.UseVisualStyleBackColor = true;
-            // 
-            // BtnKlanten
-            // 
-            this.BtnKlanten.Location = new System.Drawing.Point(324, 96);
-            this.BtnKlanten.Name = "BtnKlanten";
-            this.BtnKlanten.Size = new System.Drawing.Size(144, 52);
-            this.BtnKlanten.TabIndex = 1;
-            this.BtnKlanten.Text = "Klanten";
-            this.BtnKlanten.UseVisualStyleBackColor = true;
-            this.BtnKlanten.Click += new System.EventHandler(this.BtnKlanten_Click);
             // 
             // BtnInchecken
             // 
@@ -135,12 +125,23 @@
             this.lbxAbonnement.TabIndex = 12;
             this.lbxAbonnement.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(324, 96);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(157, 52);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Klanten";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Abonnementsoverzicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aquapalaca.Properties.Resources.output;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbxAbonnement);
             this.Controls.Add(this.dgvSubscriptions);
             this.Controls.Add(this.pictureBox2);
@@ -148,7 +149,6 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.BtnUitloggen);
             this.Controls.Add(this.BtnInchecken);
-            this.Controls.Add(this.BtnKlanten);
             this.Controls.Add(this.BtnAbonnementen);
             this.Name = "Abonnementsoverzicht";
             this.Text = "Abonnementsoverzicht";
@@ -163,7 +163,6 @@
         #endregion
 
         private System.Windows.Forms.Button BtnAbonnementen;
-        private System.Windows.Forms.Button BtnKlanten;
         private System.Windows.Forms.Button BtnInchecken;
         private System.Windows.Forms.Button BtnUitloggen;
         private System.Windows.Forms.TextBox textBox1;
@@ -171,5 +170,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridView dgvSubscriptions;
         private System.Windows.Forms.ListBox lbxAbonnement;
+        private System.Windows.Forms.Button button1;
     }
 }

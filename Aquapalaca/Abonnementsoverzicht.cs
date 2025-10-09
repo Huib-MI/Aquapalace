@@ -58,21 +58,19 @@ namespace Aquapalaca
         {
 
         }
-
-        private void BtnKlanten_Click(object sender, EventArgs e)
+        private void BtnInchecken_Click(object sender, EventArgs e)
         {
-            var nieuweForm = new Klantenoverzicht();
+            var nieuweForm = new medewerkerInchecken();
             nieuweForm.Show();
 
             this.Hide();
 
         }
 
-        private void BtnInchecken_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            var nieuweForm = new medewerkerInchecken();
-            nieuweForm.Show();
-
+            GebruikersOverzicht gebruikersOverzicht = new GebruikersOverzicht();
+            gebruikersOverzicht.Show();
             this.Hide();
 
         }

@@ -67,5 +67,14 @@ namespace Aquapalaca
             this.Hide();
 
         }
+
+        private void BtnInchecken_Click(object sender, EventArgs e)
+        {
+            var nieuweForm = new medewerkerInchecken();
+            nieuweForm.Show();
+
+            this.Hide();
+
+        }
     }
 }

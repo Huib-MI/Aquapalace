@@ -69,6 +69,7 @@
             this.BtnInchecken.TabIndex = 2;
             this.BtnInchecken.Text = "Inchecken";
             this.BtnInchecken.UseVisualStyleBackColor = true;
+            this.BtnInchecken.Click += new System.EventHandler(this.BtnInchecken_Click);
             // 
             // BtnUitloggen
             // 

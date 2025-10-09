@@ -32,7 +32,6 @@
             this.btnUitloggen = new System.Windows.Forms.Button();
             this.BtnGebruikersoverzicht = new System.Windows.Forms.Button();
             this.BtnAanpassen = new System.Windows.Forms.Button();
-            this.BtnRolbeheer = new System.Windows.Forms.Button();
             this.BtnAbonnementsoverzicht = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -61,30 +60,20 @@
             // 
             // BtnAanpassen
             // 
-            this.BtnAanpassen.Location = new System.Drawing.Point(32, 158);
+            this.BtnAanpassen.Location = new System.Drawing.Point(32, 184);
             this.BtnAanpassen.Name = "BtnAanpassen";
             this.BtnAanpassen.Size = new System.Drawing.Size(161, 67);
             this.BtnAanpassen.TabIndex = 2;
             this.BtnAanpassen.Text = "Aanpassen";
             this.BtnAanpassen.UseVisualStyleBackColor = true;
             // 
-            // BtnRolbeheer
-            // 
-            this.BtnRolbeheer.Location = new System.Drawing.Point(32, 258);
-            this.BtnRolbeheer.Name = "BtnRolbeheer";
-            this.BtnRolbeheer.Size = new System.Drawing.Size(161, 67);
-            this.BtnRolbeheer.TabIndex = 3;
-            this.BtnRolbeheer.Text = "Rolbeheer";
-            this.BtnRolbeheer.UseVisualStyleBackColor = true;
-            this.BtnRolbeheer.Click += new System.EventHandler(this.BtnRolbeheer_Click);
-            // 
             // BtnAbonnementsoverzicht
             // 
-            this.BtnAbonnementsoverzicht.Location = new System.Drawing.Point(32, 352);
+            this.BtnAbonnementsoverzicht.Location = new System.Drawing.Point(32, 301);
             this.BtnAbonnementsoverzicht.Name = "BtnAbonnementsoverzicht";
             this.BtnAbonnementsoverzicht.Size = new System.Drawing.Size(161, 67);
             this.BtnAbonnementsoverzicht.TabIndex = 5;
-            this.BtnAbonnementsoverzicht.Text = "Abonnementsoverzicht";
+            this.BtnAbonnementsoverzicht.Text = " abonementen";
             this.BtnAbonnementsoverzicht.UseVisualStyleBackColor = true;
             this.BtnAbonnementsoverzicht.Click += new System.EventHandler(this.BtnAbonnementsoverzicht_Click);
             // 
@@ -120,7 +109,6 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnAbonnementsoverzicht);
-            this.Controls.Add(this.BtnRolbeheer);
             this.Controls.Add(this.BtnAanpassen);
             this.Controls.Add(this.BtnGebruikersoverzicht);
             this.Controls.Add(this.btnUitloggen);
@@ -138,7 +126,6 @@
         private System.Windows.Forms.Button btnUitloggen;
         private System.Windows.Forms.Button BtnGebruikersoverzicht;
         private System.Windows.Forms.Button BtnAanpassen;
-        private System.Windows.Forms.Button BtnRolbeheer;
         private System.Windows.Forms.Button BtnAbonnementsoverzicht;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;

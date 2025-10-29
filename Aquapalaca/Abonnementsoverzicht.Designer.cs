@@ -29,31 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Abonnementsoverzicht));
-            this.BtnAbonnementen = new System.Windows.Forms.Button();
             this.BtnInchecken = new System.Windows.Forms.Button();
             this.BtnUitloggen = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.dgvSubscriptions = new System.Windows.Forms.DataGridView();
             this.lbxAbonnement = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSubscriptions)).BeginInit();
             this.SuspendLayout();
-            // 
-            // BtnAbonnementen
-            // 
-            this.BtnAbonnementen.Location = new System.Drawing.Point(126, 96);
-            this.BtnAbonnementen.Name = "BtnAbonnementen";
-            this.BtnAbonnementen.Size = new System.Drawing.Size(144, 52);
-            this.BtnAbonnementen.TabIndex = 0;
-            this.BtnAbonnementen.Text = "Abonnementen";
-            this.BtnAbonnementen.UseVisualStyleBackColor = true;
             // 
             // BtnInchecken
             // 
-            this.BtnInchecken.Location = new System.Drawing.Point(532, 96);
+            this.BtnInchecken.Location = new System.Drawing.Point(459, 96);
             this.BtnInchecken.Name = "BtnInchecken";
             this.BtnInchecken.Size = new System.Drawing.Size(144, 52);
             this.BtnInchecken.TabIndex = 2;
@@ -104,30 +92,19 @@
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             // 
-            // dgvSubscriptions
-            // 
-            this.dgvSubscriptions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSubscriptions.Location = new System.Drawing.Point(12, 204);
-            this.dgvSubscriptions.Name = "dgvSubscriptions";
-            this.dgvSubscriptions.RowHeadersWidth = 51;
-            this.dgvSubscriptions.RowTemplate.Height = 24;
-            this.dgvSubscriptions.Size = new System.Drawing.Size(286, 204);
-            this.dgvSubscriptions.TabIndex = 11;
-            this.dgvSubscriptions.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubscriptions_CellContentClick);
-            // 
             // lbxAbonnement
             // 
             this.lbxAbonnement.FormattingEnabled = true;
             this.lbxAbonnement.ItemHeight = 16;
-            this.lbxAbonnement.Location = new System.Drawing.Point(324, 204);
+            this.lbxAbonnement.Location = new System.Drawing.Point(116, 196);
             this.lbxAbonnement.Name = "lbxAbonnement";
-            this.lbxAbonnement.Size = new System.Drawing.Size(296, 212);
+            this.lbxAbonnement.Size = new System.Drawing.Size(487, 212);
             this.lbxAbonnement.TabIndex = 12;
             this.lbxAbonnement.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(324, 96);
+            this.button1.Location = new System.Drawing.Point(259, 96);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 52);
             this.button1.TabIndex = 13;
@@ -143,32 +120,26 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbxAbonnement);
-            this.Controls.Add(this.dgvSubscriptions);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.BtnUitloggen);
             this.Controls.Add(this.BtnInchecken);
-            this.Controls.Add(this.BtnAbonnementen);
             this.Name = "Abonnementsoverzicht";
             this.Text = "Abonnementsoverzicht";
             this.Load += new System.EventHandler(this.Abonnementsoverzicht_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSubscriptions)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button BtnAbonnementen;
         private System.Windows.Forms.Button BtnInchecken;
         private System.Windows.Forms.Button BtnUitloggen;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridView dgvSubscriptions;
         private System.Windows.Forms.ListBox lbxAbonnement;
         private System.Windows.Forms.Button button1;
     }
